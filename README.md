@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/shadiaali/rpglab/blob/master/public/images/rpglab_logo.svg" width="400"></p>
+<p align="center"><img src="https://github.com/shadiaali/rpglab/blob/master/public/images/rpglab_logo_png.png?raw=true" width="400"></p>
 
 
 ## This is my working repo for my thesis project. 
