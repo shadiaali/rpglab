@@ -3007,12 +3007,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webdevmatics/chatter.git",
-                "reference": "5b4f20a25350a5bd1f049b23e0b839b17fc43f55"
+                "reference": "7a206ba4fdfeb54643de8ca3db1ae500e90c5545"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webdevmatics/chatter/zipball/5b4f20a25350a5bd1f049b23e0b839b17fc43f55",
-                "reference": "5b4f20a25350a5bd1f049b23e0b839b17fc43f55",
+                "url": "https://api.github.com/repos/webdevmatics/chatter/zipball/7a206ba4fdfeb54643de8ca3db1ae500e90c5545",
+                "reference": "7a206ba4fdfeb54643de8ca3db1ae500e90c5545",
                 "shasum": ""
             },
             "require-dev": {
@@ -3050,7 +3050,7 @@
                 "source": "https://github.com/webdevmatics/chatter/tree/master",
                 "issues": "https://github.com/webdevmatics/chatter/issues"
             },
-            "time": "2019-11-23T16:21:17+00:00"
+            "time": "2020-04-01T17:30:00+00:00"
         }
     ],
     "packages-dev": [
