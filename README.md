@@ -10,5 +10,5 @@
 
 
 
-- [Chatter](https://github.com/Chatter-Laravel/core)
+- [Chatter](https://github.com/webdevmatics/chatter/)
 - [Tailwind CSS](https://tailwindcss.com/)

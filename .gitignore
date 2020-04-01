@@ -3,6 +3,8 @@
 /public/storage
 /storage/*.key
 /vendor
+!/vendor/webdevmatics/**
+!/vendor/devdojo/**
 .env
 .env.backup
 .phpunit.result.cache

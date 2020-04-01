@@ -2,15 +2,13 @@
 
 namespace App;
 
-use Chatter\Core\Traits\CanDiscuss;
-use Laravel\Passport\HasApiTokens;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable, CanDiscuss;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
