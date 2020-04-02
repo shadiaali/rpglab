@@ -63,19 +63,19 @@ class ChatterDiscussionController extends Controller
             'title'               => 'required|min:5|max:255',
             'body_content'        => 'required|min:10',
             'chatter_category_id' => 'required',
-         ],[
-			'title.required' =>  trans('chatter::alert.danger.reason.title_required'),
-			'title.min'     => [
-				'string'  => trans('chatter::alert.danger.reason.title_min'),
-			],
-			'title.max' => [
-				'string'  => trans('chatter::alert.danger.reason.title_max'),
-			],
-			'body_content.required' => trans('chatter::alert.danger.reason.content_required'),
-			'body_content.min' => trans('chatter::alert.danger.reason.content_min'),
-			'chatter_category_id.required' => trans('chatter::alert.danger.reason.category_required'),
-		]);
-        
+        ], [
+            'title.required' =>  trans('chatter::alert.danger.reason.title_required'),
+            'title.min'     => [
+                'string'  => trans('chatter::alert.danger.reason.title_min'),
+            ],
+            'title.max' => [
+                'string'  => trans('chatter::alert.danger.reason.title_max'),
+            ],
+            'body_content.required' => trans('chatter::alert.danger.reason.content_required'),
+            'body_content.min' => trans('chatter::alert.danger.reason.content_min'),
+            'chatter_category_id.required' => trans('chatter::alert.danger.reason.category_required'),
+        ]);
+
 
         Event::dispatch(new ChatterBeforeNewDiscussion($request, $validator));
         if (function_exists('chatter_before_new_discussion')) {
@@ -94,11 +94,11 @@ class ChatterDiscussionController extends Controller
                 $chatter_alert = [
                     'chatter_alert_type' => 'danger',
                     'chatter_alert'      => trans('chatter::alert.danger.reason.prevent_spam', [
-                                                'minutes' => $minutes,
-                                            ]),
-                    ];
+                        'minutes' => $minutes,
+                    ]),
+                ];
 
-                return redirect('/'.config('chatter.routes.home'))->with($chatter_alert)->withInput();
+                return redirect('/' . config('chatter.routes.home'))->with($chatter_alert)->withInput();
             }
         }
 
@@ -109,7 +109,7 @@ class ChatterDiscussionController extends Controller
         $incrementer = 1;
         $new_slug = $slug;
         while (isset($discussion_exists->id)) {
-            $new_slug = $slug.'-'.$incrementer;
+            $new_slug = $slug . '-' . $incrementer;
             $discussion_exists = Models::discussion()->where('slug', '=', $new_slug)->withTrashed()->first();
             $incrementer += 1;
         }
@@ -124,7 +124,7 @@ class ChatterDiscussionController extends Controller
             'user_id'             => $user_id,
             'slug'                => $slug,
             'color'               => $request->color,
-            ];
+        ];
 
         $category = Models::category()->find($request->chatter_category_id);
         if (!isset($category->slug)) {
@@ -137,10 +137,10 @@ class ChatterDiscussionController extends Controller
             'chatter_discussion_id' => $discussion->id,
             'user_id'               => $user_id,
             'body'                  => $request->body,
-            ];
+        ];
 
-        if (config('chatter.editor') == 'simplemde'):
-           $new_post['markdown'] = 1;
+        if (config('chatter.editor') == 'simplemde') :
+            $new_post['markdown'] = 1;
         endif;
 
         // add the user to automatically be notified when new posts are submitted
@@ -157,16 +157,16 @@ class ChatterDiscussionController extends Controller
             $chatter_alert = [
                 'chatter_alert_type' => 'success',
                 'chatter_alert'      => trans('chatter::alert.success.reason.created_discussion'),
-                ];
+            ];
 
-            return redirect('/'.config('chatter.routes.home').'/'.config('chatter.routes.discussion').'/'.$category->slug.'/'.$slug)->with($chatter_alert);
+            return redirect('/' . config('chatter.routes.home') . '/' . config('chatter.routes.discussion') . '/' . $category->slug . '/' . $slug)->with($chatter_alert);
         } else {
             $chatter_alert = [
                 'chatter_alert_type' => 'danger',
                 'chatter_alert'      => trans('chatter::alert.danger.reason.create_discussion'),
             ];
 
-            return redirect('/'.config('chatter.routes.home').'/'.config('chatter.routes.discussion').'/'.$category->slug.'/'.$slug)->with($chatter_alert);
+            return redirect('/' . config('chatter.routes.home') . '/' . config('chatter.routes.discussion') . '/' . $category->slug . '/' . $slug)->with($chatter_alert);
         }
     }
 
@@ -205,7 +205,7 @@ class ChatterDiscussionController extends Controller
 
         $discussion_category = Models::category()->find($discussion->chatter_category_id);
         if ($category != $discussion_category->slug) {
-            return redirect(config('chatter.routes.home').'/'.config('chatter.routes.discussion').'/'.$discussion_category->slug.'/'.$discussion->slug);
+            return redirect(config('chatter.routes.home') . '/' . config('chatter.routes.discussion') . '/' . $discussion_category->slug . '/' . $discussion->slug);
         }
         $posts = Models::post()->with('user')->where('chatter_discussion_id', '=', $discussion->id)->orderBy(config('chatter.order_by.posts.order'), config('chatter.order_by.posts.by'))->paginate(10);
 
@@ -217,7 +217,7 @@ class ChatterDiscussionController extends Controller
         }
 
         $discussion->increment('views');
-        
+
         return view('chatter::discussion', compact('discussion', 'posts', 'chatter_editor'));
     }
 
@@ -300,7 +300,7 @@ class ChatterDiscussionController extends Controller
 
             return response()->json(0);
         } else { // otherwise add it
-             $discussion->users()->attach($user_id);
+            $discussion->users()->attach($user_id);
 
             return response()->json(1);
         }
