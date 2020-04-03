@@ -15,7 +15,17 @@
         <br />
         <div class="panel panel-primary">
             <div class="panel-heading">
-                Add Employee Details
+
+             
+             @foreach($characters as $character)
+            <tr class="text-center">
+                <td>{{ $character->id }}</td>
+                <td>{{ $character->first_name }}</td>
+                
+                
+            </tr>
+            @endforeach
+              
             </div>
             <div class="panel-body">
                 <form method="post" action="{{ route('character.store') }}">

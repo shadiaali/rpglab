@@ -23,7 +23,19 @@ class CharacterController extends Controller
     public function create()
     {
         return view('createCharacter');
+        
+        
     }
+
+    public function index()
+    {
+        //Show all employees from the database and return to view
+        $characters = Character::all();
+        return view('createCharacter', ['characters' => $characters]);
+    }
+
+
+
     public function store(Request $request)
     {
         $character = new Character;
@@ -35,4 +47,6 @@ class CharacterController extends Controller
 
         return 'Success';
     }
+
+   
 }

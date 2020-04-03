@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/character', 'CharacterController@create')->name('character.create');
 Route::post('/character', 'CharacterController@store')->name('character.store');
+Route::get('/character', 'CharacterController@index')->name('character.index');
