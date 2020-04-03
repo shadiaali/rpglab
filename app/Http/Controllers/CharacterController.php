@@ -27,6 +27,14 @@ class CharacterController extends Controller
         
     }
 
+    
+
+    public function showMyCharacters()
+    {
+        //Show list of owned characters from the database and return to view
+       
+    }
+
     public function showAllCharacters()
     {
         //Show all characters from the database and return to view
