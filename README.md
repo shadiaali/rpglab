@@ -7,7 +7,7 @@
 # Werk Werk Werk : Bby steps <3
 
 -   [x] Set up base Chatter package functionality
--   [ ] Primary/Secondary User accounts Auth structure
+-   [ ] Primary/Secondary User accounts
 -   [ ] User Profiles
 
 ## Built With:
