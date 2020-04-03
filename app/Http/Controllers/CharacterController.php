@@ -27,11 +27,11 @@ class CharacterController extends Controller
         
     }
 
-    public function index()
+    public function showAllCharacters()
     {
-        //Show all employees from the database and return to view
+        //Show all characters from the database and return to view
         $characters = Character::all();
-        return view('createCharacter', ['characters' => $characters]);
+        return view('allCharacters', ['characters' => $characters]);
     }
 
 
