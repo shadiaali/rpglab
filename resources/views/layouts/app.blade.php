@@ -53,6 +53,7 @@
                         </li>
                         @endif
                         @else
+
                         <li class="nav-item">
                             <a class="nav-link" href="/home">Home</a>
                         </li>
@@ -83,6 +84,22 @@
                                 </form>
                             </div>
                         </li>
+
+
+
+
+                        <li class="nav-item">
+                            <select class="nav-link js-states browser-default select2" name="character_id" required
+                                id="character_id">
+                                <option value="option_select" disabled selected>My characters</option>
+                                @foreach(Auth::user()->characters as $character)
+                                <option value="{{ $character->id }}"
+                                    {{Auth::user()->character_id == $character->id  ? 'selected' : ''}}>
+                                    {{ $character->first_name}}</option>
+                                @endforeach
+                            </select>
+                        </li>
+
                         @endguest
                     </ul>
                 </div>

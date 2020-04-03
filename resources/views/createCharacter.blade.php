@@ -11,19 +11,21 @@
     <div class="panel panel-primary">
         <div class="panel-heading">
 
-        
 
 
-@foreach(Auth::user()->characters as $character)
+
+            my characters
+            <br>
+            @foreach(Auth::user()->characters as $character)
             <tr class="text-center">
                 <td>{{ $character->id }}</td>
                 <td>{{ $character->first_name }}</td>
-            
-            
+
+
             </tr>
             @endforeach
 
-
+            <hr>
         </div>
         <div class="panel-body">
             <form method="post" action="{{ route('character.store') }}">
