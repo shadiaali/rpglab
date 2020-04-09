@@ -14,7 +14,7 @@ class ChatterTableSeeder extends Seeder
 
         // CREATE THE USER
 
-        if (!\DB::table('users')->find(1)) {
+        /* if (!\DB::table('users')->find(1)) {
             \DB::table('users')->insert([
                 0 => [
                     'id'             => 1,
@@ -26,7 +26,7 @@ class ChatterTableSeeder extends Seeder
                     'updated_at'     => '2016-08-18 14:33:50',
                 ],
             ]);
-        }
+        } */
 
         // CREATE THE CATEGORIES
 
