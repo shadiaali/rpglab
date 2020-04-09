@@ -25,52 +25,40 @@
             </div>
         @endif
         <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="col-sm-12">
+        <div class="card">
+        <div class="card-header">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
 
-                            <span id="card_title">
-                                {!! trans('laravelusers::laravelusers.showing-all-users') !!}
+    <span id="card_title">
+        {!! trans('laravelusers::laravelusers.showing-all-users') !!}
                             </span>
 
-                            <div class="btn-group pull-right btn-group-xs">
-                                @if(config('laravelusers.softDeletedEnabled'))
-                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-v fa-fw" aria-hidden="true"></i>
-                                        <span class="sr-only">
-                                            {!! trans('laravelusers::laravelusers.users-menu-alt') !!}
-                                        </span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="{{ route('users.create') }}">
-                                                @if(config('laravelusers.fontAwesomeEnabled'))
-                                                    <i class="fa fa-fw fa-user-plus" aria-hidden="true"></i>
-                                                @endif
-                                                {!! trans('laravelusers::laravelusers.buttons.create-new') !!}
-                                            </a>
+    <div class="btn-group pull-right btn-group-xs">
+    
+    {!! trans('laravelusers::laravelusers.buttons.create-new') !!}
+    </a>
                                         </li>
                                         <li>
-                                            <a href="/users/deleted">
-                                                @if(config('laravelusers.fontAwesomeEnabled'))
-                                                    <i class="fa fa-fw fa-group" aria-hidden="true"></i>
-                                                @endif
-                                                {!! trans('laravelusers::laravelusers.show-deleted-users') !!}
+    <a href="/users/deleted">
+    @if(config('laravelusers.fontAwesomeEnabled'))
+    <i class="fa fa-fw fa-group" aria-hidden="true"></i>
+    @endif
+    {!! trans('laravelusers::laravelusers.show-deleted-users') !!}
                                             </a>
                                         </li>
                                     </ul>
-                                @else
-                                    <a href="{{ route('users.create') }}" class="btn btn-default btn-sm pull-right" data-toggle="tooltip" data-placement="left" title="{!! trans('laravelusers::laravelusers.tooltips.create-new') !!}">
-                                        @if(config('laravelusers.fontAwesomeEnabled'))
-                                            <i class="fa fa-fw fa-user-plus" aria-hidden="true"></i>
-                                        @endif
-                                        {!! trans('laravelusers::laravelusers.buttons.create-new') !!}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
+    @else
+    <a href="{{ route('users.create') }}" class="btn btn-default btn-sm pull-right" data-toggle="tooltip" data-placement="left" title="{!! trans('laravelusers::laravelusers.tooltips.create-new') !!}">
+    @if(config('laravelusers.fontAwesomeEnabled'))
+    <i class="fa fa-fw fa-user-plus" aria-hidden="true"></i>
+    @endif
+    {!! trans('laravelusers::laravelusers.buttons.create-new') !!}
+    </a>
+    @endif
+    </div>
+    </div>
+    </div>
                     <div class="card-body">
 
                         @if(config('laravelusers.enableSearchUsers'))
