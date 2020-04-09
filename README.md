@@ -13,3 +13,5 @@
 ## Built With:
 
 -   [Chatter](https://github.com/webdevmatics/chatter/)
+-   [laravel-roles](https://github.com/jeremykenedy/laravel-roles)
+-   [laravel-users](https://github.com/jeremykenedy/laravel-users)
