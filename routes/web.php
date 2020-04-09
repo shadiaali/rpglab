@@ -24,4 +24,12 @@ Route::get('/characters', 'CharacterController@showAllCharacters')->name('charac
 
 
 
+
+//users can't create users
 Route::get('users/create', 'UsersManagementController@create')->name('users.create')->middleware('permission:create.users');
+
+//users can't edit users
+Route::get('users/{user}/edit', 'UsersManagementController@edit')->name('users.edit')->middleware('permission:edit.users');
+
+//users can't delete users
+Route::delete('users/{user}', 'UsersManagementController@destroy')->name('user.destroy')->middleware('permission:delete.users');
