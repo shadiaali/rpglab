@@ -28,6 +28,7 @@ return [
 
     // Optional Roles Middleware
     'rolesMiddlware'                => 'role:user',
+    'rolesMiddlware'                => 'role:admin',
 
     // Optional Role Model
     'roleModel'                     => 'jeremykenedy\LaravelRoles\Models\Role',
