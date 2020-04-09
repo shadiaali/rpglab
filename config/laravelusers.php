@@ -27,7 +27,7 @@ return [
     'rolesMiddlwareEnabled'         => true,
 
     // Optional Roles Middleware
-    'rolesMiddlware'                => 'role:admin',
+    'rolesMiddlware'                => 'role:user',
 
     // Optional Role Model
     'roleModel'                     => 'jeremykenedy\LaravelRoles\Models\Role',
