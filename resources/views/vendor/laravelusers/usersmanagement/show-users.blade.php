@@ -35,7 +35,19 @@
                             </span>
 
     <div class="btn-group pull-right btn-group-xs">
-    
+    @if(config('laravelusers.softDeletedEnabled'))
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fa fa-ellipsis-v fa-fw" aria-hidden="true"></i>
+    <span class="sr-only">
+    {!! trans('laravelusers::laravelusers.users-menu-alt') !!}
+                                        </span>
+                                    </button>
+    <ul class="dropdown-menu">
+    <li>
+    <a href="{{ route('users.create') }}">
+    @if(config('laravelusers.fontAwesomeEnabled'))
+    <i class="fa fa-fw fa-user-plus" aria-hidden="true"></i>
+    @endif
     {!! trans('laravelusers::laravelusers.buttons.create-new') !!}
     </a>
                                         </li>
@@ -49,6 +61,7 @@
                                         </li>
                                     </ul>
     @else
+    
     <a href="{{ route('users.create') }}" class="btn btn-default btn-sm pull-right" data-toggle="tooltip" data-placement="left" title="{!! trans('laravelusers::laravelusers.tooltips.create-new') !!}">
     @if(config('laravelusers.fontAwesomeEnabled'))
     <i class="fa fa-fw fa-user-plus" aria-hidden="true"></i>

@@ -21,3 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/character', 'CharacterController@create')->name('character.create');
 Route::post('/character', 'CharacterController@store')->name('character.store');
 Route::get('/characters', 'CharacterController@showAllCharacters')->name('characters.showAllCharacters');
+
+
+
+Route::get('users/create', 'UsersManagementController@create')->name('users.create')->middleware('permission:create.users');
