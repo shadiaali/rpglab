@@ -119,7 +119,8 @@
                 @yield('content')
             </main>
         </div>
-
+        <script src="{{ asset('js/app.js') }}"></script>
+        @yield('js')
         {{-- Scripts --}}
         @if(config('laravelusers.enablejQueryCdn'))
             <script src="{{ asset(config('laravelusers.jQueryCdn')) }}"></script>
@@ -137,7 +138,6 @@
         @include('laravelusers::scripts.toggleText')
 
         @yield('template_scripts')
-        <script src="{{ asset('js/app.js') }}"></script>
-        @yield('js')
+       
     </body>
 </html>
