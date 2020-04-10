@@ -1,14 +1,15 @@
 <?php
 
-namespace Webdevmatics\Chatter\Controllers;
+//namespace Webdevmatics\Chatter\Controllers;
+namespace App\Http\Controllers;
 
 use Auth;
 use Webdevmatics\Chatter\Helpers\ChatterHelper as Helper;
 use Webdevmatics\Chatter\Models\Models;
 use Illuminate\Routing\Controller as Controller;
-use App\Http\Controllers\CharacterController;
-use App\User;
+use App\Http\Controllers;
 use App\Character;
+use App\User;
 
 class ChatterController extends Controller
 {

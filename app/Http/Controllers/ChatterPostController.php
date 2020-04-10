@@ -1,6 +1,7 @@
 <?php
 
-namespace Webdevmatics\Chatter\Controllers;
+//namespace Webdevmatics\Chatter\Controllers;
+namespace App\Http\Controllers;
 
 
 use Auth;
@@ -14,6 +15,8 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as Controller;
 use Illuminate\Support\Facades\Mail;
 use Validator;
+
+use App\User;
 
 class ChatterPostController extends Controller
 {

@@ -11,6 +11,7 @@ class CreateChatterPostTable extends Migration
             $table->increments('id');
             $table->integer('chatter_discussion_id')->unsigned();
             $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('current_character_id')->nullable();
             $table->text('body');
             $table->timestamps();
         });
