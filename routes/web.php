@@ -37,5 +37,5 @@ Route::delete('users/{user}', 'UsersManagementController@destroy')->name('user.d
 //user can edit own profile
 Route::get('user/{user}/edit', 'UsersManagementController@editUser')->middleware(['auth']);
 
-//user update route
+//user edit own profile update route
 Route::post('user/update','UsersManagementController@updateUser')->name('user.update')->middleware(['auth']);
