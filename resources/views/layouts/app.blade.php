@@ -118,7 +118,7 @@
                                     {{ $character->first_name}}</option>
                                 @endforeach
                             </select>
-                            <button type = "submit" class = "btn btn-sm btn-success">Submit</button>
+                            <button type = "submit" class = "btn btn-sm btn-success">Go</button>
                         </form>
                         </li>
 
