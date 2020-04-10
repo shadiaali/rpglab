@@ -1,0 +1,1 @@
+<h1>{{ $character->first_name }}</h1>

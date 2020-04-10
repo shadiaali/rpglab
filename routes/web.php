@@ -22,7 +22,7 @@ Route::get('/character', 'CharacterController@create')->name('character.create')
 Route::post('/character', 'CharacterController@store')->name('character.store');
 Route::get('/characters', 'CharacterController@showAllCharacters')->name('characters.showAllCharacters');
 
-
+Route::get('character/{id}','CharacterController@details')->name('character.details');
 
 
 //users can't create users

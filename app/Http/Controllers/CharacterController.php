@@ -56,5 +56,11 @@ class CharacterController extends Controller
         return 'Success';
     }
 
-   
+    //character details
+    public function details($id)
+    {
+        $character = Character::find($id);
+        return view('characterProfile',['character'=> $character]);
+    }
+
 }
