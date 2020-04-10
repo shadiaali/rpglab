@@ -33,3 +33,9 @@ Route::get('users/{user}/edit', 'UsersManagementController@edit')->name('users.e
 
 //users can't delete users
 Route::delete('users/{user}', 'UsersManagementController@destroy')->name('user.destroy')->middleware('permission:delete.users');
+
+//user can edit own profile
+Route::get('user/{user}/edit', 'UsersManagementController@editUser')->middleware(['auth']);
+
+//user update route
+Route::post('user/update','UsersManagementController@updateUser')->name('user.update')->middleware(['auth']);

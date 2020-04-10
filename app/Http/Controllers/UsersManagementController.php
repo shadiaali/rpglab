@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Validator;
+use App\User;
 
 class UsersManagementController extends Controller
 {
@@ -301,4 +302,22 @@ class UsersManagementController extends Controller
             json_encode($results),
         ], Response::HTTP_OK);
     }
+
+
+
+    public function editUser()
+    {
+        return view('editUser')->with('user', Auth::user());
+    }
+
+        public function updateUser(Request $request)
+        {
+
+            $user = Auth::user($request->input('id'));
+            $user->name = $request->input('name');
+                    
+            $user->save();
+            return redirect()->route('users')->with('message','User profile successfully updated');
+        }
+
 }
