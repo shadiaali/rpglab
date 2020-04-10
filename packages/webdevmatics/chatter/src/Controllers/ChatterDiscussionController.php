@@ -1,7 +1,6 @@
 <?php
 
-//namespace Webdevmatics\Chatter\Controllers;
-namespace App\Http\Controllers;
+namespace Webdevmatics\Chatter\Controllers;
 
 use Auth;
 use Carbon\Carbon;
@@ -12,8 +11,7 @@ use Event;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as Controller;
 use Validator;
-use App\Character;
-use App\User;
+
 
 class ChatterDiscussionController extends Controller
 {
@@ -121,13 +119,16 @@ class ChatterDiscussionController extends Controller
             $slug = $new_slug;
         }
 
+        Auth::user()->character_id = 'current_character_id';
+
         $new_discussion = [
             'title'               => $request->title,
-            'current_character_id' => $request->current_character_id,
+            'current_character_id'  => $request->current_character_id,
             'chatter_category_id' => $request->chatter_category_id,
             'user_id'             => $user_id,
             'slug'                => $slug,
             'color'               => $request->color,
+            //$current_character_id->current_character_id = $request->get('current_character_id'),
         ];
 
         $category = Models::category()->find($request->chatter_category_id);
@@ -140,7 +141,6 @@ class ChatterDiscussionController extends Controller
         $new_post = [
             'chatter_discussion_id' => $discussion->id,
             'user_id'               => $user_id,
-            
             'body'                  => $request->body,
         ];
 

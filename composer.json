@@ -62,10 +62,10 @@
             "@php artisan key:generate --ansi"
         ]
     },
-    "repositories": {
-        "chatter": {
-            "type": "vcs",
-            "url": "https://github.com/webdevmatics/chatter"
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./packages/webdevmatics/chatter"
         }
-    }
+    ]
 }

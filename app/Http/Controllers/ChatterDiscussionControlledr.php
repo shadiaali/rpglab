@@ -1,6 +1,7 @@
 <?php
 
-namespace Webdevmatics\Chatter\Controllers;
+//namespace Webdevmatics\Chatter\Controllers;
+namespace App\Http\Controllers;
 
 use Auth;
 use Carbon\Carbon;
@@ -11,7 +12,8 @@ use Event;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as Controller;
 use Validator;
-
+use App\Character;
+use App\User;
 
 class ChatterDiscussionController extends Controller
 {
@@ -60,10 +62,13 @@ class ChatterDiscussionController extends Controller
     {
         $request->request->add(['body_content' => strip_tags($request->body)]);
 
+        
+
         $validator = Validator::make($request->all(), [
             'title'               => 'required|min:5|max:255',
             'body_content'        => 'required|min:10',
             'chatter_category_id' => 'required',
+            
         ], [
             'title.required' =>  trans('chatter::alert.danger.reason.title_required'),
             'title.min'     => [
@@ -88,6 +93,7 @@ class ChatterDiscussionController extends Controller
         }
 
         $user_id = Auth::user()->id;
+        //$current_character_id = Auth::user()->character_id;
 
         if (config('chatter.security.limit_time_between_posts')) {
             if ($this->notEnoughTimeBetweenDiscussion()) {
@@ -119,13 +125,22 @@ class ChatterDiscussionController extends Controller
             $slug = $new_slug;
         }
 
+        
+        //$current_character_id = Auth::user()->character_id;
+        
+
         $new_discussion = [
-            'title'               => $request->title,
+            //'title'               => $request->title,
             'chatter_category_id' => $request->chatter_category_id,
             'user_id'             => $user_id,
             'slug'                => $slug,
             'color'               => $request->color,
+            //$current_character_id->current_character_id = $request->get('current_character_id'),
+            'current_character_id' => $request->current_character_id,
         ];
+
+    
+
 
         $category = Models::category()->find($request->chatter_category_id);
         if (!isset($category->slug)) {
@@ -137,6 +152,7 @@ class ChatterDiscussionController extends Controller
         $new_post = [
             'chatter_discussion_id' => $discussion->id,
             'user_id'               => $user_id,
+            'current_character_id' => $request->current_character_id,
             'body'                  => $request->body,
         ];
 

@@ -86,12 +86,12 @@
 					        		</div>
 
 					        		<div class="chatter_middle">
-					        			<h3 class="chatter_middle_title">{{ $discussion->title }} <div class="chatter_cat" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</div></h3>
+					        			<h3 class="chatter_middle_title">title:{{ $discussion->title }} character: {{ $discussion->current_character_id }}<div class="chatter_cat" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</div></h3>
 										
 										
 		<span class="chatter_middle_details">@lang('chatter::messages.discussion.posted_by') 
 			
-		<h1>	{{ $discussion->user->character_id }} </h1><span data-href="/user">{{ ucfirst($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</span> {{ \Carbon\Carbon::createFromTimeStamp(strtotime($discussion->created_at))->diffForHumans() }}</span>
+		<span data-href="/user">{{ ucfirst($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</span> {{ \Carbon\Carbon::createFromTimeStamp(strtotime($discussion->created_at))->diffForHumans() }}</span>
 					        			@if($discussion->post[0]->markdown)
 					        				<?php $discussion_body = GrahamCampbell\Markdown\Facades\Markdown::convertToHtml( $discussion->post[0]->body ); ?>
 					        			@else
@@ -131,13 +131,16 @@
         	<div class="row">
 	        	<div class="col-md-7">
 		        	<!-- TITLE -->
-	                <input type="text" class="form-control" id="title" name="title" placeholder="@lang('chatter::messages.editor.title')" value="{{ old('title') }}" >
+					<input type="text" class="form-control" id="title" name="title" placeholder="@lang('chatter::messages.editor.title')" value="{{ old('title') }}" > 
+					
+					<input type="hidden" class="form-control" id="current_character_id" name="current_character_id" value="{{ $discussion->user->character_id }}" >
+
 				</div>
 
-
+				
 				
 
-<input type="text" id="current_character_id" name="current_character_id" placeholder="{{ $discussion->user->character_id }}" value="{{ $discussion->user->character_id }}" >
+
 
 				
 				

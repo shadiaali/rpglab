@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bdecddcae46fe07842d7706782cd0044",
+    "content-hash": "c0bdbaee69b7887044b3efebbd177756",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1141,16 +1141,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.3.0",
+            "version": "v4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc"
+                "reference": "bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/9a9981c347c5c49d6dfe5cf826bb882b824080dc",
-                "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120",
+                "reference": "bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120",
                 "shasum": ""
             },
             "require": {
@@ -1189,7 +1189,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-11-08T13:50:10+00:00"
+            "time": "2020-04-10T16:34:50+00:00"
         },
         {
             "name": "opis/closure",
@@ -3200,16 +3200,10 @@
         {
             "name": "webdevmatics/chatter",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webdevmatics/chatter.git",
-                "reference": "7a206ba4fdfeb54643de8ca3db1ae500e90c5545"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webdevmatics/chatter/zipball/7a206ba4fdfeb54643de8ca3db1ae500e90c5545",
-                "reference": "7a206ba4fdfeb54643de8ca3db1ae500e90c5545",
-                "shasum": ""
+                "type": "path",
+                "url": "./packages/webdevmatics/chatter",
+                "reference": "223e5c9436c1c5358ed07ca4318e4c088b804534"
             },
             "require-dev": {
                 "illuminate/cache": "~5.1.20|5.2.*|5.3.*|~6",
@@ -3241,12 +3235,7 @@
                     "email": "webdevmatics@gmail.com"
                 }
             ],
-            "description": "A simple forum package for your laravel app",
-            "support": {
-                "source": "https://github.com/webdevmatics/chatter/tree/master",
-                "issues": "https://github.com/webdevmatics/chatter/issues"
-            },
-            "time": "2020-04-01T17:30:00+00:00"
+            "description": "A simple forum package for your laravel app"
         }
     ],
     "packages-dev": [
