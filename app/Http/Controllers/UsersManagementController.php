@@ -315,6 +315,7 @@ class UsersManagementController extends Controller
 
             $user = Auth::user($request->input('id'));
             $user->name = $request->input('name');
+            $user->character_id = $request->input('character_id');
                     
             $user->save();
             return redirect()->route('users')->with('message','User profile successfully updated');

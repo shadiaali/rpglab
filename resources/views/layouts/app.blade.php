@@ -105,6 +105,10 @@
 
 
                         <li class="nav-item">
+                            <form action="{{route('user.update')}}" method = "post">
+                                @csrf
+                                <input type="hidden" name = "name" id = "name" class="form-control" required value = "{{ Auth::user()->name }}">
+
                             <select class="nav-link js-states browser-default select2" name="character_id" required
                                 id="character_id">
                                 <option value="option_select" disabled selected>My characters</option>
@@ -114,6 +118,8 @@
                                     {{ $character->first_name}}</option>
                                 @endforeach
                             </select>
+                            <button type = "submit" class = "btn btn-sm btn-success">Submit</button>
+                        </form>
                         </li>
 
                         @endguest

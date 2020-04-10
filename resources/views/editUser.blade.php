@@ -15,11 +15,26 @@
                         <form action="{{route('user.update')}}" method = "post">
                             @csrf
                     
-                            <input type="hidden" name="id" value = "{{$user->id}}">
+                            
 
                             <div class="form-group">
                     
                             <input type="text" name = "name" id = "name" class="form-control" required value = "{{$user->name}}">
+
+                        
+
+                            <select name="character_id" required
+                            id="character_id">
+                            <option value="option_select" disabled selected>My characters</option>
+                            @foreach(Auth::user()->characters as $character)
+                            <option value="{{ $character->id }}"
+                                {{Auth::user()->character_id == $character->id  ? 'selected' : ''}}>
+                                {{ $character->first_name}}</option>
+                            @endforeach
+                        </select>
+
+
+
                             </div>
                             
                             <button type = "submit" class = "btn btn-success">Submit</button>
