@@ -7,8 +7,8 @@ use Webdevmatics\Chatter\Helpers\ChatterHelper as Helper;
 use Webdevmatics\Chatter\Models\Models;
 use Illuminate\Routing\Controller as Controller;
 use App\Http\Controllers\CharacterController;
-use App\User;
-use App\Character;
+use App\User as User;
+use App\Character as Character;
 
 class ChatterController extends Controller
 {

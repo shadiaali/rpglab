@@ -11,7 +11,8 @@ use Event;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as Controller;
 use Validator;
-
+use App\User as User;
+use App\Character as Character;
 
 class ChatterDiscussionController extends Controller
 {
