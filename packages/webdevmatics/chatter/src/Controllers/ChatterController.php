@@ -43,8 +43,11 @@ class ChatterController extends Controller
         }
         $characters = Character::all();
         //return view('allCharacters', ['characters' => $characters]);
+        $id = 'current_character_id';
+        $character = Character::find($id);
+        //$character->character_name = $request->get('character_name');
         
-        return view('chatter::home', ['characters' => $characters],compact('discussions', 'categories', 'categoriesMenu', 'chatter_editor', 'current_category_id'));
+        return view('chatter::home', ['characters' => $characters, 'character'=> $character],compact('discussions', 'categories', 'categoriesMenu', 'chatter_editor', 'current_category_id'));
     }
     
     public function login()
