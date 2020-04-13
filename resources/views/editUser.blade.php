@@ -29,7 +29,7 @@
                             @foreach(Auth::user()->characters as $character)
                             <option value="{{ $character->id }}"
                                 {{Auth::user()->character_id == $character->id  ? 'selected' : ''}}>
-                                {{ $character->first_name}}</option>
+                                {{ $character->character_name}}</option>
                             @endforeach
                         </select>
 

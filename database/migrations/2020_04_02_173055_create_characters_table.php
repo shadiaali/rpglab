@@ -16,8 +16,8 @@ class CreateCharactersTable extends Migration
         Schema::create('characters', function (Blueprint $table) {
             $table->smallIncrements('id');
             $table->bigInteger('user_id')->unsigned();
-            $table->string('first_name');
-            $table->string('last_name');
+            $table->string('character_name');
+            
             $table->timestamps();
         });
     }

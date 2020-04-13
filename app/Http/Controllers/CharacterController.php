@@ -48,8 +48,8 @@ class CharacterController extends Controller
     {
         $character = new Character;
         $character->user_id = Auth::user()->id;
-        $character->first_name = $request->get('first_name');
-        $character->last_name = $request->get('last_name');
+        $character->character_name = $request->get('character_name');
+        
 
         $character->save();
 

@@ -95,7 +95,7 @@ return [
     |   *namespace*: This is the user namespace for your User Model.
     |
     |   *database_field_with_user_name*: This is the database field that
-    |       is used for the users 'Name', could be 'username', 'first_name'.
+    |       is used for the users 'Name', could be 'username', 'character_name'.
     |       This will appear next to the user's avatar in discussions
     |
     |   *relative_url_to_profile*: Users may want to click on another users

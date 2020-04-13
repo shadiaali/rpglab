@@ -19,7 +19,7 @@
             @foreach(Auth::user()->characters as $character)
             <tr class="text-center">
                 <td>{{ $character->id }}</td>
-                <td>{{ $character->first_name }}</td>
+                <td>{{ $character->character_name }}</td>
 
 
             </tr>
@@ -32,12 +32,9 @@
                 {{csrf_field()}}
                 <div class="form-group">
                     <label class="col-md-4">first name</label>
-                    <input type="text" class="form-control" name="first_name" />
+                    <input type="text" class="form-control" name="character_name" />
                 </div>
-                <div class="form-group">
-                    <label class="col-md-4">last name</label>
-                    <input type="text" class="form-control" name="last_name" />
-                </div>
+               
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Add</button>
                 </div>

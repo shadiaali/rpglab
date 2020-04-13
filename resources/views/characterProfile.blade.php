@@ -1,1 +1,1 @@
-<h1>{{ $character->first_name }}</h1>
+<h1>{{ $character->character_name }}</h1>
