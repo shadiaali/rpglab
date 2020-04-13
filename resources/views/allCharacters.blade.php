@@ -13,7 +13,7 @@
         <div class="panel-heading">
 
 
-            all charactersss
+            all characters
 
         </div>
         <div class="panel-body">

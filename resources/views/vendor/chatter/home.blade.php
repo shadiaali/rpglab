@@ -100,7 +100,7 @@
 		<span class="chatter_middle_details">@lang('chatter::messages.discussion.posted_by') 
 			
 			@foreach($characters as $character)
-			{{dd($discussion)}}
+			
 			
 			@endforeach
 			
