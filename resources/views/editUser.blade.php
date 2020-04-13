@@ -23,15 +23,7 @@
 
                             
 
-                            <select name="character_name" required
-                            id="character_name">
-                            <option value="option_select" disabled selected>My characters</option>
-                            @foreach(Auth::user()->characters as $character)
-                            <option value="{{ $character->character_name }}"
-                                {{Auth::user()->character_name == $character->character_name  ? 'selected' : ''}}>
-                                {{ $character->character_name}}</option>
-                            @endforeach
-                        </select>
+                          
 
 
                             <select name="character_id" required
@@ -40,11 +32,17 @@
                             @foreach(Auth::user()->characters as $character)
                             <option value="{{ $character->id }}"
                                 {{Auth::user()->character_id == $character->id  ? 'selected' : ''}}>
-                                {{ $character->id}}</option>
+                                {{ $character->character_name}}</option>
                             @endforeach
                         </select>
 
 
+                        
+                        
+                   
+
+
+                        
 
                             </div>
                             

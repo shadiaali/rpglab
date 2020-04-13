@@ -19,7 +19,7 @@
         <div class="panel-body">
             @foreach($characters as $character)
             <tr class="text-center">
-                <td>{{ $character->character_name }} <a href="character/{{ $character->id }}">Profile</a></td><hr>
+                <td>{{ $character->character_name }} - {{$character->user->name}}<a href="character/{{ $character->id }}">Profile</a></td><hr>
                 
                 
 

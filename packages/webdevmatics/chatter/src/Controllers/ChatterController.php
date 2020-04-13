@@ -41,8 +41,10 @@ class ChatterController extends Controller
             // Dynamically register markdown service provider
             \App::register('GrahamCampbell\Markdown\MarkdownServiceProvider');
         }
+        $characters = Character::all();
+        //return view('allCharacters', ['characters' => $characters]);
         
-        return view('chatter::home', compact('discussions', 'categories', 'categoriesMenu', 'chatter_editor', 'current_category_id'));
+        return view('chatter::home', ['characters' => $characters],compact('discussions', 'categories', 'categoriesMenu', 'chatter_editor', 'current_category_id'));
     }
     
     public function login()

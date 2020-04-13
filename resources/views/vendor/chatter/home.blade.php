@@ -46,7 +46,7 @@
 	@endif
 
 	<div class="container chatter_container">
-
+		
 	    <div class="row">
 
 	    	<div class="col-md-3 left-column">
@@ -61,7 +61,9 @@
 	        <div class="col-md-9 right-column">
 	        	<div class="panel">
 		        	<ul class="discussions">
-		        		@foreach($discussions as $discussion)
+						@foreach($discussions as $discussion)
+						
+						
 				        	<li>
 				        		<a class="discussion_list" href="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.discussion') }}/{{ $discussion->category->slug }}/{{ $discussion->slug }}">
 					        		<div class="chatter_avatar">
@@ -90,14 +92,18 @@
 					        		</div>
 
 					        		<div class="chatter_middle">
+									
 										
-										
-										<h3 class="chatter_middle_title">title:{{ $discussion->title }} <div class="chatter_cat" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</div></h3>
+										<h3 class="chatter_middle_title"> title:{{ $discussion->title }} <div class="chatter_cat" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</div></h3>
 										
 										
 		<span class="chatter_middle_details">@lang('chatter::messages.discussion.posted_by') 
 			
-
+			@foreach($characters as $character)
+			{{$character->character_name}}
+			{{$discussion->user->name}}
+			
+			@endforeach
 			
 			<span data-href="character/{{ $discussion->current_character_id }}">profile</span>
 
@@ -119,7 +125,8 @@
 					        		<div class="chatter_clear"></div>
 					        	</a>
 				        	</li>
-			        	@endforeach
+						
+						@endforeach
 		        	</ul>
 	        	</div>
 

@@ -14,7 +14,7 @@ class CreateChatterDiscussionTable extends Migration
            
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('current_character_id')->nullable();
-            $table->string('current_character_name')->nullable();
+            
             $table->boolean('sticky')->default(false);
             $table->integer('views')->unsigned()->default('0');
             $table->boolean('answered')->default(0);
