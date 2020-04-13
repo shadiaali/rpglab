@@ -10,4 +10,9 @@ class Character extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function discussion()
+    {
+        return $this->hasMany(Models::className(Discussion::class), 'chatter_discussion_id');
+    }
 }

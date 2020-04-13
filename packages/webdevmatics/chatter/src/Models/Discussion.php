@@ -19,6 +19,11 @@ class Discussion extends Model
         return $this->belongsTo(config('chatter.user.namespace'));
     }
 
+    public function character()
+    {
+        return $this->belongsTo('App\Character');
+    }
+
     public function category()
     {
         return $this->belongsTo(Models::className(Category::class), 'chatter_category_id');
