@@ -9,6 +9,7 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Validator;
 use App\User;
+use App\Character;
 
 class UsersManagementController extends Controller
 {

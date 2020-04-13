@@ -21,7 +21,7 @@
             <tr class="text-center">
                 <td>{{ $character->first_name }} <a href="character/{{ $character->id }}">Profile</a></td><hr>
                 
-
+                
 
             </tr>
             @endforeach
