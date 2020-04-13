@@ -21,7 +21,18 @@
                     
                             <input type="text" name = "name" id = "name" class="form-control" required value = "{{$user->name}}">
 
-                        
+                            
+
+                            <select name="character_name" required
+                            id="character_name">
+                            <option value="option_select" disabled selected>My characters</option>
+                            @foreach(Auth::user()->characters as $character)
+                            <option value="{{ $character->character_name }}"
+                                {{Auth::user()->character_name == $character->character_name  ? 'selected' : ''}}>
+                                {{ $character->character_name}}</option>
+                            @endforeach
+                        </select>
+
 
                             <select name="character_id" required
                             id="character_id">
@@ -29,7 +40,7 @@
                             @foreach(Auth::user()->characters as $character)
                             <option value="{{ $character->id }}"
                                 {{Auth::user()->character_id == $character->id  ? 'selected' : ''}}>
-                                {{ $character->character_name}}</option>
+                                {{ $character->id}}</option>
                             @endforeach
                         </select>
 
