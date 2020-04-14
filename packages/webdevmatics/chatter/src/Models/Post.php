@@ -23,4 +23,8 @@ class Post extends Model
     {
         return $this->belongsTo(config('chatter.user.namespace'));
     }
+
+    public function character() {
+        return $this->belongsTo('App\Character', 'current_character_id', 'id');
+    }
 }
