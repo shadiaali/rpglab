@@ -10,4 +10,8 @@ class Character extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function discussions() {
+        return $this->hasMany('Webdevmatics\Chatter\Models', 'character_id', 'current_character_id');
+    }
 }

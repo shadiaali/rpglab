@@ -45,4 +45,10 @@ class Discussion extends Model
     {
         return $this->belongsToMany(config('chatter.user.namespace'), 'chatter_user_discussion', 'discussion_id', 'user_id');
     }
+
+    
+    public function character() {
+        return $this->belongsTo('App\Character', 'current_character_id', 'id');
+    }
+
 }
