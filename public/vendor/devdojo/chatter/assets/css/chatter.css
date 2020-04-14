@@ -423,6 +423,7 @@ body {
   border-radius: 3px;
   border: 0px;
   margin: 20px auto;
+  z-index:10;
 }
 #chatter ul.discussions li a.discussion_list .chatter_right,
 #chatter ul.discussions li .chatter_posts .chatter_right {
@@ -452,7 +453,7 @@ body {
   clear: both;
 }
 #chatter ul.discussions li a:hover {
-  background: #F3F6F9;
+  
   text-decoration: none;
 }
 #chatter ul.discussions li a:hover .chatter_middle h3 {

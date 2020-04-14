@@ -62,7 +62,7 @@
 	        	<div class="panel">
 		        	<ul class="discussions">
 						@foreach($discussions as $discussion)
-						
+						<span> Posted by <a href="character/{{ $discussion->current_character_id }}">{{ $discussion->character->character_name }}</a></span>
 						
 				        	<li>
 				        		<a class="discussion_list" href="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.discussion') }}/{{ $discussion->category->slug }}/{{ $discussion->slug }}">
@@ -94,7 +94,8 @@
 					        		<div class="chatter_middle">
 									
 										
-										<h3 class="chatter_middle_title"> {{ $discussion->character->character_name }} title:{{ $discussion->title }} <div class="chatter_cat" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</div></h3>
+										<h3 class="chatter_middle_title"> 
+											 title:{{ $discussion->title }} <div class="chatter_cat" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</div></h3>
 					
 				
 										
