@@ -62,7 +62,9 @@
 	        	<div class="panel">
 		        	<ul class="discussions">
 						@foreach($discussions as $discussion)
-						<span> Posted by <a href="character/{{ $discussion->current_character_id }}">{{ $discussion->character->character_name }}</a></span>
+						<span> Posted by <a href="{{ url('character') }}/{{ $discussion->character->id }}">{{ $discussion->character->character_name }}</a></span>
+
+						
 						
 				        	<li>
 				        		<a class="discussion_list" href="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.discussion') }}/{{ $discussion->category->slug }}/{{ $discussion->slug }}">
