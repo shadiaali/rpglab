@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
             $this->call('ConnectRelationshipsSeeder');
             $this->call('UsersTableSeeder');
             //$this->call('RoleUserTableSeeder');
-
+            $this->call('CharactersTableSeeder');
+            $this->call('ChatterTableSeeder');
         Model::reguard();
     }
 }

@@ -149,8 +149,9 @@
 		        	<!-- TITLE -->
 					<input type="text" class="form-control" id="title" name="title" placeholder="@lang('chatter::messages.editor.title')" value="{{ old('title') }}" > 
 					
-					<input type="hidden" class="form-control" id="current_character_id" name="current_character_id" value="{{ $discussion->user->character_id }}" >
-
+					<input type="hidden" class="form-control" id="current_character_id" name="current_character_id" value="
+					{{ $discussion->user->character_id or '1' }}">
+					
 				</div>
 
 				
