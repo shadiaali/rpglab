@@ -16,13 +16,26 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+//home page
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/character', 'CharacterController@create')->name('character.create');
-Route::post('/character', 'CharacterController@store')->name('character.store');
+//a user can create a character
+Route::get('/addcharacter', 'CharacterController@create')->name('character.create');
+//a user can store the character
+Route::post('/addcharacter', 'CharacterController@store')->name('character.store');
+//show all the characters
 Route::get('/characters', 'CharacterController@showAllCharacters')->name('characters.showAllCharacters');
-
+//show a user's owned characters
+Route::get('/character', 'CharacterController@myCharacters')->name('character.myCharacters');
+//each character has a profile page
 Route::get('character/{id}','CharacterController@details')->name('character.details');
+//user can edit owned character 
+Route::get('character/{id}/edit', 'CharacterController@editCharacter')->middleware(['auth']);
+
+//user edit owned character update route
+Route::post('character/update','CharacterController@updateCharacter')->name('character.update');
+//Route::post('character/update', 'CharacterController@updateCharacter')->name('character.update');
+//Route::post('character/update','CharacterController@updateCharacter')->name('character.update');
+//Route::put('character/update/{id}', ['as' => 'character.update', 'uses' => 'CharacterController@updateCharacter']);
 
 
 //users can't create users

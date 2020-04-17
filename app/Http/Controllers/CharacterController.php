@@ -29,9 +29,10 @@ class CharacterController extends Controller
 
     
 
-    public function showMyCharacters()
+    public function myCharacters()
     {
         //Show list of owned characters from the database and return to view
+        return view('myCharacters');
        
     }
 
@@ -56,11 +57,40 @@ class CharacterController extends Controller
         return 'Success';
     }
 
-    //character details
+    //character details/profile
     public function details($id)
     {
         $character = Character::find($id);
+        //$character->user_id = Auth::user()->id;
+        //$character->character_name = $request->get('character_name');
         return view('characterProfile',['character'=> $character]);
     }
+
+    
+   public function editCharacter($id)
+    {
+        $character = Character::find($id);
+        return view('editCharacter',['character'=> $character]);
+    } 
+
+    
+
+    
+    public function updateCharacter(Request $request)
+    {
+
+
+        //$user = Auth::user();
+        //$character = Character::find($id);
+
+        $character = Character::find($request->input('id'));
+
+            $character->character_name = $request->character_name;
+            $character->save(); 
+
+            return redirect('character')->with('success', trans('laravelusers::laravelusers.messages.update-success'));
+            
+        }  
+        
 
 }
