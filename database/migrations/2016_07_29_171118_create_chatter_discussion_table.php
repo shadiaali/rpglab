@@ -13,7 +13,7 @@ class CreateChatterDiscussionTable extends Migration
             $table->string('title');
            
             $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('current_character_id')->nullable();
+            $table->bigInteger('character_id')->nullable();
             
             $table->boolean('sticky')->default(false);
             $table->integer('views')->unsigned()->default('0');

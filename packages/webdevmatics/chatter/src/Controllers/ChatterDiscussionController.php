@@ -120,16 +120,16 @@ class ChatterDiscussionController extends Controller
             $slug = $new_slug;
         }
 
-        Auth::user()->character_id = 'current_character_id';
+        Auth::user()->character_id = 'character_id';
 
         $new_discussion = [
             'title'               => $request->title,
-            'current_character_id'  => $request->current_character_id,
+            'character_id'  => $request->character_id,
             'chatter_category_id' => $request->chatter_category_id,
             'user_id'             => $user_id,
             'slug'                => $slug,
             'color'               => $request->color,
-            //$current_character_id->current_character_id = $request->get('current_character_id'),
+            //$character_id->character_id = $request->get('character_id'),
         ];
 
         $category = Models::category()->find($request->chatter_category_id);
@@ -138,10 +138,11 @@ class ChatterDiscussionController extends Controller
         }
 
         $discussion = Models::discussion()->create($new_discussion);
-
+        Auth::user()->character_id = 'character_id';
         $new_post = [
             'chatter_discussion_id' => $discussion->id,
             'user_id'               => $user_id,
+            'character_id'  => $request->character_id,
             'body'                  => $request->body,
         ];
 
@@ -213,7 +214,7 @@ class ChatterDiscussionController extends Controller
         if ($category != $discussion_category->slug) {
             return redirect(config('chatter.routes.home') . '/' . config('chatter.routes.discussion') . '/' . $discussion_category->slug . '/' . $discussion->slug);
         }
-        $posts = Models::post()->with('user')->where('chatter_discussion_id', '=', $discussion->id)->orderBy(config('chatter.order_by.posts.order'), config('chatter.order_by.posts.by'))->paginate(10);
+        $posts = Models::post()->with('character')->with('user')->where('chatter_discussion_id', '=', $discussion->id)->orderBy(config('chatter.order_by.posts.order'), config('chatter.order_by.posts.by'))->paginate(10);
 
         $chatter_editor = config('chatter.editor');
 

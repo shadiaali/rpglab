@@ -43,7 +43,7 @@ class ChatterController extends Controller
         }
         $characters = Character::all();
         //return view('allCharacters', ['characters' => $characters]);
-        $id = 'current_character_id';
+        $id = 'character_id';
         $character = Character::find($id);
         //$character->character_name = $request->get('character_name');
         

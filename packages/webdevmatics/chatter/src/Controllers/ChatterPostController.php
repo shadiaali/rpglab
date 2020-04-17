@@ -83,7 +83,7 @@ class ChatterPostController extends Controller
 
         $request->request->add(['user_id' => Auth::user()->id]);
 
-        $request->request->add(['current_character_id' => Auth::user()->character_id]);
+        $request->request->add(['character_id' => Auth::user()->character_id]);
 
         if (config('chatter.editor') == 'simplemde'):
             $request->request->add(['markdown' => 1]);

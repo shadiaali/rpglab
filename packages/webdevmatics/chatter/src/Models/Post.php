@@ -11,7 +11,7 @@ class Post extends Model
     
     protected $table = 'chatter_post';
     public $timestamps = true;
-    protected $fillable = ['chatter_discussion_id', 'user_id','current_character_id', 'body', 'markdown'];
+    protected $fillable = ['chatter_discussion_id', 'user_id','character_id', 'body', 'markdown'];
     protected $dates = ['deleted_at'];
 
     public function discussion()
@@ -25,6 +25,6 @@ class Post extends Model
     }
 
     public function character() {
-        return $this->belongsTo('App\Character', 'current_character_id', 'id');
+        return $this->belongsTo('App\Character', 'character_id', 'id');
     }
 }

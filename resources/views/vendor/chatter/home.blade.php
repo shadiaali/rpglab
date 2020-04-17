@@ -105,7 +105,7 @@
 			
 			
 			
-			<span data-href="character/{{ $discussion->current_character_id }}">profile</span>
+			<span data-href="character/{{ $discussion->character_id }}">profile</span>
 
 			
 		<span data-href="/user">{{ ucfirst($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</span> {{ \Carbon\Carbon::createFromTimeStamp(strtotime($discussion->created_at))->diffForHumans() }}</span>
@@ -151,7 +151,7 @@
 		        	<!-- TITLE -->
 					<input type="text" class="form-control" id="title" name="title" placeholder="@lang('chatter::messages.editor.title')" value="{{ old('title') }}" > 
 					
-					<input type="hidden" class="form-control" id="current_character_id" name="current_character_id" value="
+					<input type="hidden" class="form-control" id="character_id" name="character_id" value="
 					{{ $discussion->user->character_id}}">
 					
 				</div>

@@ -11,7 +11,7 @@ class Discussion extends Model
     
     protected $table = 'chatter_discussion';
     public $timestamps = true;
-    protected $fillable = ['title', 'chatter_category_id', 'user_id', 'current_character_id', 'slug', 'color'];
+    protected $fillable = ['title', 'chatter_category_id', 'user_id', 'character_id', 'slug', 'color'];
     protected $dates = ['deleted_at', 'last_reply_at'];
 
     public function user()
@@ -48,7 +48,7 @@ class Discussion extends Model
 
     
     public function character() {
-        return $this->belongsTo('App\Character', 'current_character_id', 'id');
+        return $this->belongsTo('App\Character', 'character_id', 'id');
     }
 
 }
