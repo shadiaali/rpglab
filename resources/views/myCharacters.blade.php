@@ -15,7 +15,7 @@
 <tr class="text-center">
     <td>id: {{ $character->id }} | </td>
     <td>{{ $character->character_name }} | </td>
-    <td><a href="character/{{ $character->id }}/edit">Edit</a></td>
+    <td><a href="character/{{ $character->id }}/edit">Edit</a> 
 
 </tr>
 @endforeach

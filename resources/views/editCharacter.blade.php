@@ -19,8 +19,9 @@
         <button type = "submit" class = "btn btn-success">Submit</button>
     </form><br><hr>
     @else
+    Why would you try to edit a character that doesn't belong to you?
     @endif
-    No hoe
+    
     
     <div class="container justify-content-center text-center"><a onclick="goBack()" class="text-white btn spring-warmth-gradient btn-lg"> Go back</a><div>
 </div>

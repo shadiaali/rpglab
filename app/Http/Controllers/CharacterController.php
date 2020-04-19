@@ -101,6 +101,14 @@ class CharacterController extends Controller
             return redirect('character')->with('success', trans('laravelusers::laravelusers.messages.update-success'));
             
         }  
+
+            
+    public function destroyCharacter($id)
+    {
+        $character = Character::find($id);
+        $character->delete();
+        return redirect('character')->with('success', trans('laravelusers::laravelusers.messages.delete-success'));
+    }
         
 
 }

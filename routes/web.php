@@ -34,6 +34,10 @@ Route::get('character/{id}/edit', 'CharacterController@editCharacter')->middlewa
 //user edit owned character update route
 Route::post('character/update','CharacterController@updateCharacter')->name('character.update');
 
+//delete owned character//coming soon
+//Route::get('character/{id}/delete','CharacterController@destroyCharacter')->name('character.destroy');
+
+
 
 //users can't create users
 Route::get('users/create', 'UsersManagementController@create')->name('users.create')->middleware('permission:create.users');
