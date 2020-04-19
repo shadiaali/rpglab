@@ -89,6 +89,10 @@ class ChatterDiscussionController extends Controller
         }
 
         $user_id = Auth::user()->id;
+        //Auth::user()->character_id = 'character_id';
+
+        $current_character_id = Auth::user()->character_id;
+
 
         if (config('chatter.security.limit_time_between_posts')) {
             if ($this->notEnoughTimeBetweenDiscussion()) {
@@ -120,13 +124,13 @@ class ChatterDiscussionController extends Controller
             $slug = $new_slug;
         }
 
-        Auth::user()->character_id = 'character_id';
+        
 
         $new_discussion = [
             'title'               => $request->title,
-            'character_id'  => $request->character_id,
             'chatter_category_id' => $request->chatter_category_id,
             'user_id'             => $user_id,
+            'character_id'   => $current_character_id,
             'slug'                => $slug,
             'color'               => $request->color,
             //$character_id->character_id = $request->get('character_id'),
@@ -138,11 +142,11 @@ class ChatterDiscussionController extends Controller
         }
 
         $discussion = Models::discussion()->create($new_discussion);
-        Auth::user()->character_id = 'character_id';
+        
         $new_post = [
             'chatter_discussion_id' => $discussion->id,
             'user_id'               => $user_id,
-            'character_id'  => $request->character_id,
+            'character_id'  => $current_character_id,
             'body'                  => $request->body,
         ];
 

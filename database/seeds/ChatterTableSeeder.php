@@ -88,6 +88,7 @@ class ChatterTableSeeder extends Seeder
         ]);
 
         // CREATE THE DISCUSSIONS
+        $dummy_id=99;
 
         \DB::table('chatter_discussion')->delete();
 
@@ -97,7 +98,7 @@ class ChatterTableSeeder extends Seeder
                 'chatter_category_id' => 1,
                 'title'               => 'Hello Everyone, This is my Introduction',
                 'user_id'             => 1,
-                'character_id'             => 1,
+                
                 'sticky'              => 0,
                 'views'               => 0,
                 'answered'            => 0,
@@ -118,7 +119,7 @@ class ChatterTableSeeder extends Seeder
                         'id'                    => 1,
                         'chatter_discussion_id' => 1,
                         'user_id'               => 1,
-                        'character_id'             => 1,
+                        
                         'body'                  => '<p>My name is Tony and I\'m a developer at <a href="https://devdojo.com" target="_blank">https://devdojo.com</a> and I also work with an awesome company in PB called The Control Group: <a href="http://www.thecontrolgroup.com" target="_blank">http://www.thecontrolgroup.com</a></p>
         <p>You can check me out on twitter at <a href="http://www.twitter.com/tnylea" target="_blank">http://www.twitter.com/tnylea</a></p>
         <p>or you can subscribe to me on YouTube at <a href="http://www.youtube.com/devdojo" target="_blank">http://www.youtube.com/devdojo</a></p>',

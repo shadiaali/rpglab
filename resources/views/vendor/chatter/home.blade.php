@@ -47,114 +47,112 @@
 
 	<div class="container chatter_container">
 		
-	    <div class="row">
+<div class="row">
 
-	    	<div class="col-md-3 left-column">
-	    		<!-- SIDEBAR -->
-	    		<div class="chatter_sidebar">wat
+<div class="col-md-3 left-column">
+<!-- SIDEBAR -->
+<div class="chatter_sidebar">wat
 					<button class="btn btn-primary" id="new_discussion_btn"><i class="chatter-new"></i> @lang('chatter::messages.discussion.new')</button>
 					<a href="/{{ Config::get('chatter.routes.home') }}"><i class="chatter-bubble"></i> @lang('chatter::messages.discussion.all')</a>
-          		{!! $categoriesMenu !!}
+{!! $categoriesMenu !!}
 				</div>
 				<!-- END SIDEBAR -->
-	    	</div>
-	        <div class="col-md-9 right-column">
-	        	<div class="panel">
-		        	<ul class="discussions">
-						@foreach($discussions as $discussion)
-						<span> Posted by <a href="{{ url('character') }}/{{ $discussion->character->id }}">{{ $discussion->character->character_name }}</a></span>
+</div>
+<div class="col-md-9 right-column">
+<div class="panel">
+<ul class="discussions">
+@foreach($discussions as $discussion)
+						
+posted by @php
+$current_character_id = $discussion->character_id;
+		@endphp 
+
+		{{ $current_character_id }}
 
 						
-						
-				        	<li>
-				        		<a class="discussion_list" href="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.discussion') }}/{{ $discussion->category->slug }}/{{ $discussion->slug }}">
-					        		<div class="chatter_avatar">
-					        			@if(Config::get('chatter.user.avatar_image_database_field'))
+	<li>
+<a class="discussion_list" href="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.discussion') }}/{{ $discussion->category->slug }}/{{ $discussion->slug }}">
+<div class="chatter_avatar">
+@if(Config::get('chatter.user.avatar_image_database_field'))
 
-					        				<?php $db_field = Config::get('chatter.user.avatar_image_database_field'); ?>
+<?php $db_field = Config::get('chatter.user.avatar_image_database_field'); ?>
 
-					        				<!-- If the user db field contains http:// or https:// we don't need to use the relative path to the image assets -->
-					        				@if( (substr($discussion->user->{$db_field}, 0, 7) == 'http://') || (substr($discussion->user->{$db_field}, 0, 8) == 'https://') )
-					        					<img src="{{ $discussion->user->{$db_field}  }}">
-					        				@else
-					        					<img src="{{ Config::get('chatter.user.relative_url_to_image_assets') . $discussion->user->{$db_field}  }}">
-					        				@endif
+<!-- If the user db field contains http:// or https:// we don't need to use the relative path to the image assets -->
+@if( (substr($discussion->user->{$db_field}, 0, 7) == 'http://') || (substr($discussion->user->{$db_field}, 0, 8) == 'https://') )
+<img src="{{ $discussion->user->{$db_field}  }}">
+@else
+<img src="{{ Config::get('chatter.user.relative_url_to_image_assets') . $discussion->user->{$db_field}  }}">
+@endif
 
-					        			@else
+@else
 
-					        				<span class="chatter_avatar_circle" style="background-color:#<?= \Webdevmatics\Chatter\Helpers\ChatterHelper::stringToColorCode($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) ?>">
-					        					{{ strtoupper(substr($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}, 0, 1)) }}
+<span class="chatter_avatar_circle" style="background-color:#<?= \Webdevmatics\Chatter\Helpers\ChatterHelper::stringToColorCode($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) ?>">
+{{ strtoupper(substr($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}, 0, 1)) }}
 											
-											
+	</span>
+@endif
+</div>
 
-											
-											</span>
-
-					        			@endif
-					        		</div>
-
-					        		<div class="chatter_middle">
+<div class="chatter_middle">
 									
 										
-										<h3 class="chatter_middle_title"> 
-											 title:{{ $discussion->title }} <div class="chatter_cat" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</div></h3>
+<h3 class="chatter_middle_title"> 
+title:{{ $discussion->title }} <div class="chatter_cat" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</div></h3>
 					
 				
-										
-		<span class="chatter_middle_details">@lang('chatter::messages.discussion.posted_by') 
+<span class="chatter_middle_details">@lang('chatter::messages.discussion.posted_by') 
 			
 			
-			
-			<span data-href="character/{{ $discussion->character_id }}">profile</span>
+<span data-href="character/{{ $discussion->character_id }}">profile</span>
 
 			
-		<span data-href="/user">{{ ucfirst($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</span> {{ \Carbon\Carbon::createFromTimeStamp(strtotime($discussion->created_at))->diffForHumans() }}</span>
-					        			@if($discussion->post[0]->markdown)
-					        				<?php $discussion_body = GrahamCampbell\Markdown\Facades\Markdown::convertToHtml( $discussion->post[0]->body ); ?>
-					        			@else
-					        				<?php $discussion_body = $discussion->post[0]->body; ?>
-					        			@endif
-					        			<p>{{ substr(strip_tags($discussion_body), 0, 200) }}@if(strlen(strip_tags($discussion_body)) > 200){{ '...' }}@endif</p>
-					        		</div>
+<span data-href="/user">{{ ucfirst($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</span> {{ \Carbon\Carbon::createFromTimeStamp(strtotime($discussion->created_at))->diffForHumans() }}</span>
+@if($discussion->post[0]->markdown)
+<?php $discussion_body = GrahamCampbell\Markdown\Facades\Markdown::convertToHtml( $discussion->post[0]->body ); ?>
+@else
+<?php $discussion_body = $discussion->post[0]->body; ?>
+@endif
+<p>{{ substr(strip_tags($discussion_body), 0, 200) }}@if(strlen(strip_tags($discussion_body)) > 200){{ '...' }}@endif</p>
+</div>
 
-					        		<div class="chatter_right">
+<div class="chatter_right">
 
-					        			<div class="chatter_count"><i class="chatter-bubble"></i> {{ $discussion->postsCount[0]->total }}</div>
-					        		</div>
+<div class="chatter_count"><i class="chatter-bubble"></i> {{ $discussion->postsCount[0]->total }}</div>
+</div>
 
-					        		<div class="chatter_clear"></div>
-					        	</a>
-				        	</li>
+<div class="chatter_clear"></div>
+</a>
+</li>
 						
-						@endforeach
-		        	</ul>
-	        	</div>
+	@endforeach
+</ul>
+</div>
 
-	        	<div id="pagination">
-	        		{{ $discussions->links() }}
-	        	</div>
+<div id="pagination">
+{{ $discussions->links() }}
+</div>
 
-	        </div>
-	    </div>
+</div>
+</div>
 	</div>
 
 	<div id="new_discussion">
 
 
-    	<div class="chatter_loader dark" id="new_discussion_loader">
-		    <div></div>
+<div class="chatter_loader dark" id="new_discussion_loader">
+<div></div>
 		</div>
 
-    	<form id="chatter_form_editor" action="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.discussion') }}" method="POST">
-        	<div class="row">
-	        	<div class="col-md-7">
-		        	<!-- TITLE -->
-					<input type="text" class="form-control" id="title" name="title" placeholder="@lang('chatter::messages.editor.title')" value="{{ old('title') }}" > 
+<form id="chatter_form_editor" action="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.discussion') }}" method="POST">
+<div class="row">
+<div class="col-md-7">
+<!-- TITLE -->
+<input type="text" class="form-control" id="title" name="title" placeholder="@lang('chatter::messages.editor.title')" value="{{ old('title') }}" > 
 					
-					<input type="hidden" class="form-control" id="character_id" name="character_id" value="
-					{{ $discussion->user->character_id}}">
+<input type="hidden" class="form-control" id="character_id" name="character_id" value="
+{{ $discussion->user->character_id}}">
 					
-				</div>
+</div>
 
 				
 				
@@ -164,46 +162,46 @@
 				
 				
 
-	            <div class="col-md-4">
-		            <!-- CATEGORY -->
-					<select id="chatter_category_id" class="form-control" name="chatter_category_id">
-						<option value="">@lang('chatter::messages.editor.select')</option>
-						@foreach($categories as $category)
-							@if(old('chatter_category_id') == $category->id)
-								<option value="{{ $category->id }}" selected>{{ $category->name }}</option>
-							@elseif(!empty($current_category_id) && $current_category_id == $category->id)
-								<option value="{{ $category->id }}" selected>{{ $category->name }}</option>
-							@else
-								<option value="{{ $category->id }}">{{ $category->name }}</option>
-							@endif
-						@endforeach
-					</select>
-		        </div>
+<div class="col-md-4">
+<!-- CATEGORY -->
+<select id="chatter_category_id" class="form-control" name="chatter_category_id">
+<option value="">@lang('chatter::messages.editor.select')</option>
+@foreach($categories as $category)
+@if(old('chatter_category_id') == $category->id)
+<option value="{{ $category->id }}" selected>{{ $category->name }}</option>
+@elseif(!empty($current_category_id) && $current_category_id == $category->id)
+<option value="{{ $category->id }}" selected>{{ $category->name }}</option>
+@else
+<option value="{{ $category->id }}">{{ $category->name }}</option>
+@endif
+@endforeach
+</select>
+</div>
 
-		        <div class="col-md-1">
-		        	<i class="chatter-close"></i>
-		        </div>
-	        </div><!-- .row -->
+<div class="col-md-1">
+<i class="chatter-close"></i>
+</div>
+</div><!-- .row -->
 
             <!-- BODY -->
-        	<div id="editor">
-        		@if( $chatter_editor == 'tinymce' || empty($chatter_editor) )
+<div id="editor">
+@if( $chatter_editor == 'tinymce' || empty($chatter_editor) )
 					<label id="tinymce_placeholder">@lang('chatter::messages.editor.tinymce_placeholder')</label>
-    				<textarea id="body" class="richText" name="body" placeholder="">{{ old('body') }}</textarea>
-    			@elseif($chatter_editor == 'simplemde')
-    				<textarea id="simplemde" name="body" placeholder="">{{ old('body') }}</textarea>
+<textarea id="body" class="richText" name="body" placeholder="">{{ old('body') }}</textarea>
+@elseif($chatter_editor == 'simplemde')
+<textarea id="simplemde" name="body" placeholder="">{{ old('body') }}</textarea>
 				@elseif($chatter_editor == 'trumbowyg')
 					<textarea class="trumbowyg" name="body" placeholder="@lang('chatter::messages.editor.tinymce_placeholder')">{{ old('body') }}</textarea>
 				@endif
-    		</div>
+</div>
 
             <input type="hidden" name="_token" id="csrf_token_field" value="{{ csrf_token() }}">
 
             <div id="new_discussion_footer">
-            	<input type='text' id="color" name="color" /><span class="select_color_text">@lang('chatter::messages.editor.select_color_text')</span>
-            	<button id="submit_discussion" class="btn btn-success pull-right"><i class="chatter-new"></i> @lang('chatter::messages.discussion.create')</button>
-            	<a href="/{{ Config::get('chatter.routes.home') }}" class="btn btn-default pull-right" id="cancel_discussion">@lang('chatter::messages.words.cancel')</a>
-            	<div style="clear:both"></div>
+<input type='text' id="color" name="color" /><span class="select_color_text">@lang('chatter::messages.editor.select_color_text')</span>
+<button id="submit_discussion" class="btn btn-success pull-right"><i class="chatter-new"></i> @lang('chatter::messages.discussion.create')</button>
+<a href="/{{ Config::get('chatter.routes.home') }}" class="btn btn-default pull-right" id="cancel_discussion">@lang('chatter::messages.words.cancel')</a>
+<div style="clear:both"></div>
             </div>
         </form>
 
