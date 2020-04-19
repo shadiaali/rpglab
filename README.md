@@ -33,19 +33,19 @@ Users are able to upload and give characters awards/badges that appear on their 
 
 
 # Planned Features
--   [] **Inbox System**
+-   [ ] **Inbox System**
 
 Users would be able to send, view, delete messages.
 
--   [] **Random Events**
+-   [ ] **Random Events**
 
 Random Events act like writing prompts for users. These would randomly appear within parameters set by the Admin and show Globally (forum-wide), Locally (area-wide), Sub-locally (sub-area-wide) or at Thread level (thread-wide)
 
--   [] **Current Events**
+-   [ ] **Current Events**
   
 As various events are always being run in-game by players, a calendar/event system would be beneficial. Events could be inserted, and shown Globally (forum-wide), Locally (area-wide), Sub- locally (sub-area-wide) or at Thread level (thread-wide) in the areas they applied to with specified start/end times.
 
--   [] **Notifications**
+-   [ ] **Notifications**
 
 Users would receive notifications based on activity like new messages or new replies to threads.
 
