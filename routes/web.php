@@ -62,6 +62,6 @@ Route::post('/sendaward', 'AwardController@store')->name('award.store');
 Route::get('/awards', 'AwardController@showAllAwards')->name('awards.showAllAwards');
 
 //add categories to forum
-Route::get('/addcategory', 'CategoryController@create')->name('category.create');
+Route::get('/addcategory', 'CategoryController@create')->name('category.create')->middleware('role:admin');
 //store categories
-Route::post('/addcategory', 'CategoryController@store')->name('category.store');
+Route::post('/addcategory', 'CategoryController@store')->name('category.store')->middleware('role:admin');
