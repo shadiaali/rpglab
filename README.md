@@ -4,7 +4,7 @@
 
 <p align="center"><img src="https://media.giphy.com/media/Fv8uxK7iNIEhi/source.gif" width="400"></p>
 
-# Werk Werk Werk : Bby steps <3
+# Current Features
 
 -   [x] **Author Account**
 
@@ -30,6 +30,24 @@ Users are able to upload and give characters awards/badges that appear on their 
 
 
 ## Built With:
+
+
+# Planned Features
+-   [x] Inbox System
+Users would be able to send, view, delete messages.
+
+-   [x] Random Events
+Random Events act like writing prompts for users. These would randomly appear within parameters set by the Admin and show Globally (forum-wide), Locally (area-wide), Sub-locally (sub-area-wide) or at Thread level (thread-wide)
+
+-   [x] Current Events
+As various events are always being run in-game by players, a calendar/event system would be beneficial. Events could be inserted, and shown Globally (forum-wide), Locally (area-wide), Sub- locally (sub-area-wide) or at Thread level (thread-wide) in the areas they applied to with specified start/end times.
+
+-   [x] Notifications
+Users would receive notifications based on activity like new messages or new replies to threads.
+
+
+
+
 
 -   [Chatter](https://github.com/webdevmatics/chatter/)
 -   [laravel-roles](https://github.com/jeremykenedy/laravel-roles)
