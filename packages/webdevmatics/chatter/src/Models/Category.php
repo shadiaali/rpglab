@@ -10,6 +10,9 @@ class Category extends Model
     public $timestamps = true;
     public $with = 'parents';
 
+    protected $fillable = ['parent_id', 'order', 'name', 'color', 'slug'];
+
+
     public function discussions()
     {
         return $this->hasMany(Models::className(Discussion::class),'chatter_category_id');
