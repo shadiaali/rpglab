@@ -14,10 +14,27 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+//rules index
+Route::get('rules','RuleController@index')->name('rules.index');
 Auth::routes();
 //home page
 Route::get('/home', 'HomeController@index')->name('home');
+
+//destroy rule
+Route::get('rules/{id}/delete','RuleController@destroy')->name('rules.destroy');
+
+//rules create
+Route::get('rules/create','RuleController@create')->name('rules.create');
+
+//rules store
+Route::post('rules/create','RuleController@store')->name('rules.store');
+
+
+
+
+
+
+
 //a user can create a character
 Route::get('/addcharacter', 'CharacterController@create')->name('character.create');
 //a user can store the character
