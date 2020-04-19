@@ -29,8 +29,6 @@ Profiles (also known as Character Sheets) are tied to each account. This makes k
 Users are able to upload and give characters awards/badges that appear on their profile page. 
 
 
-## Built With:
-
 
 # Planned Features
 -   [ ] **Inbox System**
@@ -51,7 +49,7 @@ Users would receive notifications based on activity like new messages or new rep
 
 
 
-# Built with the help of
+## Built with the help of
 -   [Chatter](https://github.com/webdevmatics/chatter/)
 -   [laravel-roles](https://github.com/jeremykenedy/laravel-roles)
 -   [laravel-users](https://github.com/jeremykenedy/laravel-users)
