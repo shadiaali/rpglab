@@ -121,11 +121,18 @@
 	<div class="chatter_middle">
 		
 		posted by @php
-$current_character_id = $post->character_id;
-
-                @endphp 
-        
-                {{ $current_character_id }} 
+		$current_character_id = $post->character_id;
+		@endphp 
+		
+		@if($current_character_id === null)
+		no character set 
+		@else  
+		posted by @php
+		$current_character_name = $post->character->character_name;
+		@endphp 
+		
+		<a href="character/{{ $current_character_id }}">{{ $current_character_name }}</a>
+		@endif
 
 	
 	<span class="chatter_middle_details"><a href="{{ \Webdevmatics\Chatter\Helpers\ChatterHelper::userLink($post->user) }}">{{ ucfirst($post->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</a> <span class="ago chatter_middle_details">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($post->created_at))->diffForHumans() }}</span></span>
