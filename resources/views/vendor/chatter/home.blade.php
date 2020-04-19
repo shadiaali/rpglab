@@ -176,10 +176,10 @@ $isCharacterIdEmpty = $discussion->user->character_id;
 
 @if($isCharacterIdEmpty === null)
 
-<input  class="form-control" id="character_id" name="character_id" value="">
+<input type="hidden" class="form-control" id="character_id" name="character_id" value="">
 
 @else  
-<input  class="form-control" id="character_id" name="character_id" value="{{ $discussion->user->character_id}}">
+<input type="hidden" class="form-control" id="character_id" name="character_id" value="{{ $discussion->user->character_id}}">
 @endif
 
 
