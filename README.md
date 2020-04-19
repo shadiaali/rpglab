@@ -51,8 +51,7 @@ Users would receive notifications based on activity like new messages or new rep
 
 
 
-
-
+# Built with the help of
 -   [Chatter](https://github.com/webdevmatics/chatter/)
 -   [laravel-roles](https://github.com/jeremykenedy/laravel-roles)
 -   [laravel-users](https://github.com/jeremykenedy/laravel-users)
