@@ -78,6 +78,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/roles">Roles</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/addcategory">Categories</a>
+                        </li>
                         @endrole
 
                         <li class="nav-item dropdown">
