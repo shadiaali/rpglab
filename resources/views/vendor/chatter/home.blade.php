@@ -61,6 +61,12 @@
 <div class="col-md-9 right-column">
 <div class="panel">
 <ul class="discussions">
+
+	
+	
+	
+	
+
 @foreach($discussions as $discussion)
 						
 posted by @php
@@ -163,14 +169,25 @@ title:{{ $discussion->title }} <div class="chatter_cat" style="background-color:
 <div class="col-md-7">
 <!-- TITLE -->
 <input type="text" class="form-control" id="title" name="title" placeholder="@lang('chatter::messages.editor.title')" value="{{ old('title') }}" > 
-					
-<input type="hidden" class="form-control" id="character_id" name="character_id" value="
-{{ $discussion->user->character_id}}">
-					
+
+@php
+$isCharacterIdEmpty = $discussion->user->character_id;
+@endphp 
+
+@if($isCharacterIdEmpty === null)
+
+<input  class="form-control" id="character_id" name="character_id" value="">
+
+@else  
+<input  class="form-control" id="character_id" name="character_id" value="{{ $discussion->user->character_id}}">
+@endif
+
+
 </div>
 
-				
-				
+
+
+
 
 
 
@@ -291,4 +308,5 @@ title:{{ $discussion->title }} <div class="chatter_cat" style="background-color:
 
 	});
 </script>
+
 @stop
