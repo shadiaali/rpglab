@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>rpgLab</title>
 
         <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -219,14 +219,15 @@ a:hover {
     background-color: #FCF797;
     border-radius:10px;
 }
-          </style>
-          
-          <!-- Main navigation -->
+
+
+        </style>
+        <!-- Main navigation -->
         
     </head>
 
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top scrolling-navbar ">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top scrolling-navbar ">
     <div class="container-fluid">
       
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
@@ -283,8 +284,8 @@ a:hover {
         <!--Grid row-->
         <div class="row">
           <!--Grid column-->
-          <div class="mt-5 col-12 mb-4 white-text text-center">
-            <center><img class="mt-5" style="max-width:35%;" src="images/rpglab_logo_png.png"></center>
+          <div class="col-12 mb-4 white-text text-center">
+            <center><img style="max-width:35%;" src="images/rpglab_logo_png.png"></center>
             
             <h6 class="mb-4 text-black-50 wow fadeInDown" data-wow-delay="0.4s"><strong>A Play-by-Post RPG Creator</strong></h6>
             

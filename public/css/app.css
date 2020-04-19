@@ -1,4 +1,180 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);/*!
+@import url(https://fonts.googleapis.com/css?family=Nunito);h1 {
+  font-family: PT Sans;
+  font-size: 7.62939453125em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 9.899999999999999rem;
+  margin-bottom: 3.3rem;
+}
+
+h2 {
+  font-family: PT Sans;
+  font-size: 6.103515625em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 6.6rem;
+  margin-bottom: 3.3rem;
+}
+
+h3 {
+  font-family: PT Sans;
+  font-size: 4.8828125em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 6.6rem;
+  margin-bottom: 3.3rem;
+}
+
+h4 {
+  font-family: PT Sans;
+  font-size: 3.90625em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 6.6rem;
+  margin-bottom: 3.3rem;
+}
+
+h5 {
+  font-family: PT Sans;
+  font-size: 3.125em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 3.3rem;
+  margin-bottom: 3.3rem;
+}
+
+h6 {
+  font-family: PT Sans;
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 3.3rem;
+  margin-bottom: 3.3rem;
+}
+
+p {
+  font-family: GFS Didot;
+  font-size: 2em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 3.3rem;
+  margin-bottom: 3.3rem;
+}
+
+default {
+  font-size: 1.6em;
+  line-height: 3.3rem;
+}
+
+@media screen and (max-width: 720px) {
+  default {
+    font-size: 1.6em;
+    line-height: 2.5rem;
+  }
+
+  h1 {
+    font-family: PT Sans;
+    font-size: 6.103515625em;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 7.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-family: PT Sans;
+    font-size: 4.8828125em;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  h3 {
+    font-family: PT Sans;
+    font-size: 3.90625em;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  h4 {
+    font-family: PT Sans;
+    font-size: 3.125em;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  h5 {
+    font-family: PT Sans;
+    font-size: 2.5em;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  h6 {
+    font-family: PT Sans;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  p {
+    font-family: GFS Didot;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #FFF !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: #FFF !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #FFF !important;
+  }
+}
+
+a {
+  color: #5E6774 !important;
+  font-weight: 100;
+}
+
+a:hover {
+  background-color: #FCF797;
+  border-radius: 10px;
+}
+
+/*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
