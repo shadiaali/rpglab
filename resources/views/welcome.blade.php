@@ -68,6 +68,9 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     <a href="rules">Rules</a>
+                    <a href="gameinfo">Game Info</a>
+                    <a href="characterclasses">Character Classes</a>
+
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
