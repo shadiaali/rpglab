@@ -65,9 +65,16 @@
 						
 posted by @php
 $current_character_id = $discussion->character_id;
+
+
 		@endphp 
 
 		{{ $current_character_id }}
+
+		{{dd($discussion)}}
+
+		
+
 
 						
 	<li>

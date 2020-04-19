@@ -129,13 +129,7 @@ return [
         'avatar_image_database_field'   => '',
     ],
 
-    'character' => [
-        'namespace'                     => 'App\Character',
-        'database_field_with_character_name' => 'character_name',
-        'relative_url_to_profile'       => '/character/{id}',
-        'relative_url_to_image_assets'  => '',
-        'avatar_image_database_field'   => '',
-    ],
+    
 
     /*
     |--------------------------------------------------------------------------

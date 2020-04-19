@@ -122,10 +122,10 @@
 		
 		posted by @php
 $current_character_id = $post->character_id;
-$current_character_name = $post->character->character_name;
+
                 @endphp 
         
-                {{ $current_character_id }} {{ $current_character_name }} 
+                {{ $current_character_id }} 
 
 	
 	<span class="chatter_middle_details"><a href="{{ \Webdevmatics\Chatter\Helpers\ChatterHelper::userLink($post->user) }}">{{ ucfirst($post->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</a> <span class="ago chatter_middle_details">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($post->created_at))->diffForHumans() }}</span></span>

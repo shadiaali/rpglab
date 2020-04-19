@@ -15,7 +15,9 @@ class ChatterController extends Controller
     public function index($slug = '')
     {
         $pagination_results = config('chatter.paginate.num_of_results');
-        
+
+    
+
         $discussions = Models::discussion()->with('user')->with('character')->with('post')->with('postsCount')->with('category')->orderBy(config('chatter.order_by.discussions.order'), config('chatter.order_by.discussions.by'));
         if (isset($slug)) {
             $category = Models::category()->where('slug', '=', $slug)->first();

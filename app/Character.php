@@ -17,7 +17,7 @@ class Character extends Model
     }
 
     public function discussions() {
-        return $this->hasMany('Webdevmatics\Chatter\Models', 'id', 'character_id');
+        return $this->hasMany('packages/Webdevmatics\Chatter\Models', 'character_id', 'character_id');
     }
 
     public function posts() {

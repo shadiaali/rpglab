@@ -209,10 +209,13 @@ class ChatterDiscussionController extends Controller
             return redirect(config('chatter.routes.home'));
         }
 
-        $discussion = Models::discussion()->where('slug', '=', $slug)->first();
+        $discussion = Models::discussion()->with('character')->where('slug', '=', $slug)->first();
         if (is_null($discussion)) {
             abort(404);
         }
+
+        
+        
 
         $discussion_category = Models::category()->find($discussion->chatter_category_id);
         if ($category != $discussion_category->slug) {
