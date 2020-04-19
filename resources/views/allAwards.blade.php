@@ -9,6 +9,7 @@
 
 
             all awards
+            | <a href="sendaward">Send award</a>
 
         </div>
         <div class="panel-body">

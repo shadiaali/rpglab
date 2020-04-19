@@ -68,6 +68,9 @@
                             <a class="nav-link" href="/forums">Forums</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="/awards">Awards</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/users">Users</a>
                         </li>
                         
