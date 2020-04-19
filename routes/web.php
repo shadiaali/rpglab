@@ -52,3 +52,8 @@ Route::get('user/{user}/edit', 'UsersManagementController@editUser')->middleware
 
 //user edit own profile update route
 Route::post('user/update','UsersManagementController@updateUser')->name('user.update')->middleware(['auth']);
+
+//send award
+Route::get('/sendaward', 'AwardController@create')->name('award.create');
+//store award
+Route::post('/sendaward', 'AwardController@store')->name('award.store');

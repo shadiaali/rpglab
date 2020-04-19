@@ -79,6 +79,7 @@ $current_character_name = $discussion->character->character_name;
 		
 
 
+
 						
 	<li>
 <a class="discussion_list" href="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.discussion') }}/{{ $discussion->category->slug }}/{{ $discussion->slug }}">

@@ -28,7 +28,7 @@
             <hr>
         </div>
         <div class="panel-body">
-            <form method="post" action="{{ route('character.store') }}">
+        <form method="post" action="{{ route('character.store') }}">
                 {{csrf_field()}}
                 <div class="form-group">
                     <label class="col-md-4">first name</label>

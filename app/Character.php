@@ -27,4 +27,12 @@ class Character extends Model
     public function post() {
         return $this->hasMany('packages/Webdevmatics\Chatter\Models', 'character_id', 'id');
     }
+
+    public function awards() {
+        return $this->hasMany('App\Award');
+    }
+
+    public function award() {
+        return $this->hasMany('App\Award');
+    }
 }
