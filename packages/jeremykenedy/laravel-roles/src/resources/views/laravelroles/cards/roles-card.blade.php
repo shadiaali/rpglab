@@ -3,7 +3,7 @@
         <div class="card-header bg-default">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span id="card_title">
-                    {!! trans('laravelroles::laravelroles.titles.roles-card') !!}
+                    {!! trans('laravelroles::laravelroles.titles.roles-card') !!} 
                 </span>
                 <span class="badge badge-pill badge-dark">
                     {!! count($items) !!}
