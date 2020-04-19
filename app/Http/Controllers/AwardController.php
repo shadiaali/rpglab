@@ -44,5 +44,12 @@ class AwardController extends Controller
         
     }
 
+    public function showAllAwards()
+    {
+        
+        $awards = Award::all();
+        return view('allAwards', ['awards' => $awards]);
+    }
+
 
 }

@@ -7,6 +7,7 @@ use App\Character;
 use Auth;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Award;
 
 class CharacterController extends Controller
 {
@@ -60,14 +61,23 @@ class CharacterController extends Controller
     //character details/profile
     public function details($id)
     {
+        //$character = Character::find($id);
+        
+        
+        //return view('characterProfile',['character'=> $character]);
+
+        
         $character = Character::find($id);
-        //$character->user_id = Auth::user()->id;
-        //$character->character_name = $request->get('character_name');
-        return view('characterProfile',['character'=> $character]);
+
+        $character->load('awards')->get();
+
+        return view('characterProfile', compact('character'));
     }
 
+
+
     
-   public function editCharacter($id)
+    public function editCharacter($id)
     {
         $character = Character::find($id);
         return view('editCharacter',['character'=> $character]);

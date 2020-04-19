@@ -33,9 +33,6 @@ Route::get('character/{id}/edit', 'CharacterController@editCharacter')->middlewa
 
 //user edit owned character update route
 Route::post('character/update','CharacterController@updateCharacter')->name('character.update');
-//Route::post('character/update', 'CharacterController@updateCharacter')->name('character.update');
-//Route::post('character/update','CharacterController@updateCharacter')->name('character.update');
-//Route::put('character/update/{id}', ['as' => 'character.update', 'uses' => 'CharacterController@updateCharacter']);
 
 
 //users can't create users
@@ -57,3 +54,5 @@ Route::post('user/update','UsersManagementController@updateUser')->name('user.up
 Route::get('/sendaward', 'AwardController@create')->name('award.create');
 //store award
 Route::post('/sendaward', 'AwardController@store')->name('award.store');
+//show all the awards
+Route::get('/awards', 'AwardController@showAllAwards')->name('awards.showAllAwards');

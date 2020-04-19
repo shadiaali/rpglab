@@ -29,10 +29,12 @@ class Character extends Model
     }
 
     public function awards() {
-        return $this->hasMany('App\Award');
+        return $this->hasMany('App\Award','character_id', 'id');
     }
 
     public function award() {
-        return $this->hasMany('App\Award');
+        return $this->hasMany('App\Award','character_id', 'id');
     }
+
+
 }
