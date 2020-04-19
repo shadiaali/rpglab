@@ -127,7 +127,7 @@
 		@if($current_character_id === null)
 		no character set 
 		@else  
-		posted by @php
+		@php
 		$current_character_name = $post->character->character_name;
 		@endphp 
 		

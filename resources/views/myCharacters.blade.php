@@ -13,9 +13,9 @@
 <br>
 @foreach(Auth::user()->characters as $character)
 <tr class="text-center">
-    <td>{{ $character->id }}</td>
-    <td>{{ $character->character_name }}</td>
-
+    <td>id: {{ $character->id }} | </td>
+    <td>{{ $character->character_name }} | </td>
+    <td><a href="character/{{ $character->id }}/edit">Edit</a></td>
 
 </tr>
 @endforeach
