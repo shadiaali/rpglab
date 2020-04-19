@@ -21,13 +21,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //destroy rule
-Route::get('rules/{id}/delete','RuleController@destroy')->name('rules.destroy');
+Route::get('rules/{id}/delete','RuleController@destroy')->name('rules.destroy')->middleware('role:admin');
 
 //rules create
-Route::get('rules/create','RuleController@create')->name('rules.create');
+Route::get('rules/create','RuleController@create')->name('rules.create')->middleware('role:admin');
 
 //rules store
-Route::post('rules/create','RuleController@store')->name('rules.store');
+Route::post('rules/create','RuleController@store')->name('rules.store')->middleware('role:admin');
 
 
 

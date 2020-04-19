@@ -7,9 +7,11 @@
 <div class="text-white text-center py-5 px-4">
 
     <h1 class="display-4 font-bold">Rules</h1>
+
+    @role('admin')
 <br>
     <a href="rules/create" class="text-white btn btn-danger btn-sm"><i class="fas fa-plus left"></i> Create New Rule</a>
-
+    @endrole
 
 </div>
 </div>
@@ -29,9 +31,11 @@
 <h3>{{ $rule->more_info }}</h3>
     
                             
-
+@role('admin')
 <a href="{{route('rules.destroy',['id'=>$rule->id])}}"
                                 class="text-white btn btn-danger btn-sm">Delete</a>
+
+                                @endrole
                 @endforeach
             
 </div>
