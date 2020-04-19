@@ -65,14 +65,17 @@
 						
 posted by @php
 $current_character_id = $discussion->character_id;
+@endphp 
 
+@if($current_character_id === null)
+no character set 
+@else  
+posted by @php
+$current_character_name = $discussion->character->character_name;
+@endphp 
 
-		@endphp 
-
-		{{ $current_character_id }}
-
-		{{dd($discussion)}}
-
+<a href="character/{{ $current_character_id }}">{{ $current_character_name }}</a>
+@endif
 		
 
 
