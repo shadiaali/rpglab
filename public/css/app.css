@@ -1,4 +1,16 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);h1 {
+@import url(https://fonts.googleapis.com/css?family=GFS+Didot|PT+Sans&display=swap);body {
+  font-family: GFS Didot !important;
+  letter-spacing: 0.4px !important;
+  font-weight: lighter !important;
+}
+
+ul {
+  font-family: GFS Didot, sans-serif !important;
+  font-size: 1.1em !important;
+  font-weight: lighter !important;
+}
+
+h1 {
   font-family: PT Sans;
   font-size: 7.62939453125em;
   font-style: normal;
@@ -68,17 +80,7 @@ p {
   margin-bottom: 3.3rem;
 }
 
-default {
-  font-size: 1.6em;
-  line-height: 3.3rem;
-}
-
 @media screen and (max-width: 720px) {
-  default {
-    font-size: 1.6em;
-    line-height: 2.5rem;
-  }
-
   h1 {
     font-family: PT Sans;
     font-size: 6.103515625em;
@@ -150,6 +152,11 @@ default {
   }
 }
 
+.logo {
+  width: 100%;
+  max-width: 160px;
+}
+
 .top-nav-collapse {
   background-color: #FFF !important;
 }
@@ -162,6 +169,10 @@ default {
   .navbar:not(.top-nav-collapse) {
     background: #FFF !important;
   }
+}
+
+body {
+  background-image: repeating-linear-gradient(135deg, rgba(79, 79, 79, 0.01) 0px, rgba(79, 79, 79, 0.01) 14px, rgba(94, 94, 94, 0.01) 14px, rgba(94, 94, 94, 0.01) 28px, rgba(109, 109, 109, 0.01) 28px, rgba(109, 109, 109, 0.01) 42px, rgba(124, 124, 124, 0.01) 42px, rgba(124, 124, 124, 0.01) 56px, rgba(139, 139, 139, 0.01) 56px, rgba(139, 139, 139, 0.01) 70px, rgba(154, 154, 154, 0.01) 70px, rgba(154, 154, 154, 0.01) 84px, rgba(169, 169, 169, 0.01) 84px, rgba(169, 169, 169, 0.01) 98px, rgba(184, 184, 184, 0.01) 98px, rgba(184, 184, 184, 0.01) 112px), repeating-linear-gradient(45deg, rgba(221, 221, 221, 0.01) 0px, rgba(221, 221, 221, 0.01) 14px, rgba(207, 207, 207, 0.01) 14px, rgba(207, 207, 207, 0.01) 28px, rgba(192, 192, 192, 0.01) 28px, rgba(192, 192, 192, 0.01) 42px, rgba(178, 178, 178, 0.01) 42px, rgba(178, 178, 178, 0.01) 56px, rgba(164, 164, 164, 0.01) 56px, rgba(164, 164, 164, 0.01) 70px, rgba(150, 150, 150, 0.01) 70px, rgba(150, 150, 150, 0.01) 84px, rgba(135, 135, 135, 0.01) 84px, rgba(135, 135, 135, 0.01) 98px, rgba(121, 121, 121, 0.01) 98px, rgba(121, 121, 121, 0.01) 112px), linear-gradient(90deg, #ffffff, #ffffff) !important;
 }
 
 a {
@@ -208,7 +219,7 @@ a:hover {
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Nunito", sans-serif;
+  --font-family-sans-serif: GFS Didot;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -240,10 +251,10 @@ section {
 
 body {
   margin: 0;
-  font-family: "Nunito", sans-serif;
-  font-size: 0.9rem;
+  font-family: GFS Didot;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #212529;
   text-align: left;
   background-color: #f8fafc;
@@ -565,36 +576,36 @@ h6,
 
 h1,
 .h1 {
-  font-size: 2.25rem;
+  font-size: 3rem;
 }
 
 h2,
 .h2 {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
 }
 
 h3,
 .h3 {
-  font-size: 1.575rem;
+  font-size: 2.1rem;
 }
 
 h4,
 .h4 {
-  font-size: 1.35rem;
+  font-size: 1.8rem;
 }
 
 h5,
 .h5 {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
 }
 
 h6,
 .h6 {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 .lead {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -666,7 +677,7 @@ mark,
 
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
 }
 
 .blockquote-footer {
@@ -2324,11 +2335,11 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.6em + 0.75rem + 2px);
+  height: calc(1.8em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
@@ -2408,20 +2419,20 @@ select.form-control:focus::-ms-value {
   padding-bottom: calc(0.375rem + 1px);
   margin-bottom: 0;
   font-size: inherit;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .col-form-label-lg {
   padding-top: calc(0.5rem + 1px);
   padding-bottom: calc(0.5rem + 1px);
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
   padding-bottom: calc(0.25rem + 1px);
-  font-size: 0.7875rem;
+  font-size: 1.05rem;
   line-height: 1.5;
 }
 
@@ -2430,8 +2441,8 @@ select.form-control:focus::-ms-value {
   width: 100%;
   padding: 0.375rem 0;
   margin-bottom: 0;
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.8;
   color: #212529;
   background-color: transparent;
   border: solid transparent;
@@ -2447,7 +2458,7 @@ select.form-control:focus::-ms-value {
 .form-control-sm {
   height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
-  font-size: 0.7875rem;
+  font-size: 1.05rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -2455,7 +2466,7 @@ select.form-control:focus::-ms-value {
 .form-control-lg {
   height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 1rem;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
@@ -2542,8 +2553,8 @@ textarea.form-control {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.7875rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.8;
   color: #fff;
   background-color: rgba(56, 193, 114, 0.9);
   border-radius: 0.25rem;
@@ -2559,11 +2570,11 @@ textarea.form-control {
 .was-validated .form-control:valid,
 .form-control.is-valid {
   border-color: #38c172;
-  padding-right: calc(1.6em + 0.75rem);
+  padding-right: calc(1.8em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2338c172' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.4em + 0.1875rem) center;
-  background-size: calc(0.8em + 0.375rem) calc(0.8em + 0.375rem);
+  background-position: right calc(0.45em + 0.1875rem) center;
+  background-size: calc(0.9em + 0.375rem) calc(0.9em + 0.375rem);
 }
 
 .was-validated .form-control:valid:focus,
@@ -2574,15 +2585,15 @@ textarea.form-control {
 
 .was-validated textarea.form-control:valid,
 textarea.form-control.is-valid {
-  padding-right: calc(1.6em + 0.75rem);
-  background-position: top calc(0.4em + 0.1875rem) right calc(0.4em + 0.1875rem);
+  padding-right: calc(1.8em + 0.75rem);
+  background-position: top calc(0.45em + 0.1875rem) right calc(0.45em + 0.1875rem);
 }
 
 .was-validated .custom-select:valid,
 .custom-select.is-valid {
   border-color: #38c172;
   padding-right: calc(0.75em + 2.3125rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2338c172' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.8em + 0.375rem) calc(0.8em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2338c172' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.9em + 0.375rem) calc(0.9em + 0.375rem);
 }
 
 .was-validated .custom-select:valid:focus,
@@ -2656,8 +2667,8 @@ textarea.form-control.is-valid {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.7875rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.8;
   color: #fff;
   background-color: rgba(227, 52, 47, 0.9);
   border-radius: 0.25rem;
@@ -2673,11 +2684,11 @@ textarea.form-control.is-valid {
 .was-validated .form-control:invalid,
 .form-control.is-invalid {
   border-color: #e3342f;
-  padding-right: calc(1.6em + 0.75rem);
+  padding-right: calc(1.8em + 0.75rem);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23e3342f' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23e3342f' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right calc(0.4em + 0.1875rem) center;
-  background-size: calc(0.8em + 0.375rem) calc(0.8em + 0.375rem);
+  background-position: right calc(0.45em + 0.1875rem) center;
+  background-size: calc(0.9em + 0.375rem) calc(0.9em + 0.375rem);
 }
 
 .was-validated .form-control:invalid:focus,
@@ -2688,15 +2699,15 @@ textarea.form-control.is-valid {
 
 .was-validated textarea.form-control:invalid,
 textarea.form-control.is-invalid {
-  padding-right: calc(1.6em + 0.75rem);
-  background-position: top calc(0.4em + 0.1875rem) right calc(0.4em + 0.1875rem);
+  padding-right: calc(1.8em + 0.75rem);
+  background-position: top calc(0.45em + 0.1875rem) right calc(0.45em + 0.1875rem);
 }
 
 .was-validated .custom-select:invalid,
 .custom-select.is-invalid {
   border-color: #e3342f;
   padding-right: calc(0.75em + 2.3125rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23e3342f' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23e3342f' stroke='none'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.8em + 0.375rem) calc(0.8em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23e3342f' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23e3342f' stroke='none'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.9em + 0.375rem) calc(0.9em + 0.375rem);
 }
 
 .was-validated .custom-select:invalid:focus,
@@ -2835,8 +2846,8 @@ textarea.form-control.is-invalid {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.8;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -3510,7 +3521,7 @@ fieldset:disabled a.btn {
 .btn-lg,
 .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
@@ -3518,7 +3529,7 @@ fieldset:disabled a.btn {
 .btn-sm,
 .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.7875rem;
+  font-size: 1.05rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -3605,7 +3616,7 @@ input[type="button"].btn-block {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #212529;
   text-align: left;
   list-style: none;
@@ -3816,7 +3827,7 @@ input[type="button"].btn-block {
   display: block;
   padding: 0.5rem 1.5rem;
   margin-bottom: 0;
-  font-size: 0.7875rem;
+  font-size: 1.05rem;
   color: #6c757d;
   white-space: nowrap;
 }
@@ -4061,9 +4072,9 @@ input[type="button"].btn-block {
   align-items: center;
   padding: 0.375rem 0.75rem;
   margin-bottom: 0;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #495057;
   text-align: center;
   white-space: nowrap;
@@ -4089,7 +4100,7 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
   padding: 0.5rem 1rem;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
@@ -4106,7 +4117,7 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.7875rem;
+  font-size: 1.05rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -4139,7 +4150,7 @@ input[type="button"].btn-block {
 .custom-control {
   position: relative;
   display: block;
-  min-height: 1.44rem;
+  min-height: 2.16rem;
   padding-left: 1.5rem;
 }
 
@@ -4153,7 +4164,7 @@ input[type="button"].btn-block {
   left: 0;
   z-index: -1;
   width: 1rem;
-  height: 1.22rem;
+  height: 1.58rem;
   opacity: 0;
 }
 
@@ -4195,7 +4206,7 @@ input[type="button"].btn-block {
 
 .custom-control-label::before {
   position: absolute;
-  top: 0.22rem;
+  top: 0.58rem;
   left: -1.5rem;
   display: block;
   width: 1rem;
@@ -4208,7 +4219,7 @@ input[type="button"].btn-block {
 
 .custom-control-label::after {
   position: absolute;
-  top: 0.22rem;
+  top: 0.58rem;
   left: -1.5rem;
   display: block;
   width: 1rem;
@@ -4266,7 +4277,7 @@ input[type="button"].btn-block {
 }
 
 .custom-switch .custom-control-label::after {
-  top: calc(0.22rem + 2px);
+  top: calc(0.58rem + 2px);
   left: calc(-2.25rem + 2px);
   width: calc(1rem - 4px);
   height: calc(1rem - 4px);
@@ -4293,11 +4304,11 @@ input[type="button"].btn-block {
 .custom-select {
   display: inline-block;
   width: 100%;
-  height: calc(1.6em + 0.75rem + 2px);
+  height: calc(1.8em + 0.75rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #495057;
   vertical-align: middle;
   background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
@@ -4345,7 +4356,7 @@ input[type="button"].btn-block {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
-  font-size: 0.7875rem;
+  font-size: 1.05rem;
 }
 
 .custom-select-lg {
@@ -4353,14 +4364,14 @@ input[type="button"].btn-block {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
 }
 
 .custom-file {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: calc(1.6em + 0.75rem + 2px);
+  height: calc(1.8em + 0.75rem + 2px);
   margin-bottom: 0;
 }
 
@@ -4368,7 +4379,7 @@ input[type="button"].btn-block {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: calc(1.6em + 0.75rem + 2px);
+  height: calc(1.8em + 0.75rem + 2px);
   margin: 0;
   opacity: 0;
 }
@@ -4397,10 +4408,10 @@ input[type="button"].btn-block {
   right: 0;
   left: 0;
   z-index: 1;
-  height: calc(1.6em + 0.75rem + 2px);
+  height: calc(1.8em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #495057;
   background-color: #fff;
   border: 1px solid #ced4da;
@@ -4414,9 +4425,9 @@ input[type="button"].btn-block {
   bottom: 0;
   z-index: 3;
   display: block;
-  height: calc(1.6em + 0.75rem);
+  height: calc(1.8em + 0.75rem);
   padding: 0.375rem 0.75rem;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #495057;
   content: "Browse";
   background-color: #e9ecef;
@@ -4715,10 +4726,10 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.32rem;
-  padding-bottom: 0.32rem;
+  padding-top: 0.23rem;
+  padding-bottom: 0.23rem;
   margin-right: 1rem;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -4760,7 +4771,7 @@ input[type="button"].btn-block {
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
@@ -5453,7 +5464,7 @@ input[type="button"].btn-block {
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 
@@ -5469,7 +5480,7 @@ input[type="button"].btn-block {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 0.7875rem;
+  font-size: 1.05rem;
   line-height: 1.5;
 }
 
@@ -5694,7 +5705,7 @@ a.badge-dark.focus {
 }
 
 .alert-dismissible {
-  padding-right: 3.85rem;
+  padding-right: 4.3rem;
 }
 
 .alert-dismissible .close {
@@ -5841,7 +5852,7 @@ a.badge-dark.focus {
   display: flex;
   height: 1rem;
   overflow: hidden;
-  font-size: 0.675rem;
+  font-size: 0.9rem;
   background-color: #e9ecef;
   border-radius: 0.25rem;
 }
@@ -6257,7 +6268,7 @@ a.badge-dark.focus {
 
 .close {
   float: right;
-  font-size: 1.35rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1;
   color: #000;
@@ -6473,7 +6484,7 @@ a.close.disabled {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .modal-body {
@@ -6550,10 +6561,10 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: GFS Didot;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.8;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -6564,7 +6575,7 @@ a.close.disabled {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.7875rem;
+  font-size: 1.05rem;
   word-wrap: break-word;
   opacity: 0;
 }
@@ -6675,10 +6686,10 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Nunito", sans-serif;
+  font-family: GFS Didot;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.8;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -6689,7 +6700,7 @@ a.close.disabled {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.7875rem;
+  font-size: 1.05rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
@@ -6831,7 +6842,7 @@ a.close.disabled {
 .popover-header {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-top-left-radius: calc(0.3rem - 1px);

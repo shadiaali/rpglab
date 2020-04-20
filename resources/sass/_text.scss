@@ -1,3 +1,16 @@
+
+body{
+    font-family: GFS Didot !important;
+    letter-spacing: 0.4px !important;
+    font-weight:lighter !important;
+}
+
+ul{
+    font-family: GFS Didot, sans-serif !important;
+    font-size: 1.1em !important;
+    font-weight:lighter !important;
+}
+
 h1 {
     font-family: PT Sans;
     font-size: 7.62939453125em;
@@ -68,16 +81,10 @@ h1 {
     margin-bottom: 3.3rem;
     }
     
-    default {
-    font-size: 1.6em;
-    line-height: 3.3rem;
-    }
+    
     
     @media screen and (max-width: 720px) {
-    default {
-    font-size: 1.6em;
-    line-height: 2.5rem;
-    }
+    
     h1 {
     font-family: PT Sans;
     font-size: 6.103515625em;
