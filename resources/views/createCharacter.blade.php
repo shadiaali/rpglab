@@ -14,18 +14,7 @@
 
 
 
-            my characters
-            <br>
-            @foreach(Auth::user()->characters as $character)
-            <tr class="text-center">
-                <td>{{ $character->id }}</td>
-                <td>{{ $character->character_name }}</td>
-
-
-            </tr>
-            @endforeach
-
-            <hr>
+            
         </div>
         <div class="panel-body">
         <form method="post" action="{{ route('character.store') }}">
