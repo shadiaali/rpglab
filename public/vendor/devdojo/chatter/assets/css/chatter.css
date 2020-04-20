@@ -255,14 +255,15 @@ body {
   position: relative;
 }
 #chatter .left-column .nav-pills > li > a .chatter-box {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
   float: left;
   position: absolute;
-  top: 50%;
+  top: 35%;
   margin-top: -5px;
-  left: 10px;
+  left: -20px;
+  text-align:left !important;
 }
 #chatter .left-column .nav-pills > li > a:focus,
 #chatter .left-column .nav-pills > li > a:hover {

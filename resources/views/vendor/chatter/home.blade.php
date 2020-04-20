@@ -45,95 +45,64 @@
 		@endif
 	@endif
 
-	<div class="container chatter_container">
+	<div class="container-fluid">
 		
 <div class="row">
 
-<div class="col-md-3 left-column">
+<div class="col-md-4 left-column">
 <!-- SIDEBAR -->
-<div class="chatter_sidebar">wat
-					<button class="btn btn-primary" id="new_discussion_btn"><i class="chatter-new"></i> @lang('chatter::messages.discussion.new')</button>
-					<a href="/{{ Config::get('chatter.routes.home') }}"><i class="chatter-bubble"></i> @lang('chatter::messages.discussion.all')</a>
+
+<div class="card sticky-top"><div class="card-header">Areas</div>
+<div class="card-body">
+	<a class="text-white btn btn-lg btn-yellow" id="new_discussion_btn">New Thread</a>
+<hr>
+<a href="/{{ Config::get('chatter.routes.home') }}"><i class="chatter-bubble"></i> View All Threads</a><hr>
 {!! $categoriesMenu !!}
-				</div>
+				</div></div>
 				<!-- END SIDEBAR -->
 </div>
-<div class="col-md-9 right-column">
-<div class="panel">
+<div class="col-md-8 right-column">
+<div class="card">
 <ul class="discussions">
-
 	
-	
-	
-	
-
 @foreach($discussions as $discussion)
-						
-posted by @php
+
+	@php
 $current_character_id = $discussion->character_id;
 @endphp 
 
 @if($current_character_id === null)
-no character set 
+<p><span data-href="/user">{{ ucfirst($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</span>  </p>
 @else  
-posted by 
-
-
+<p>By 
 @php
 $current_character_name = $discussion->character->character_name;
 @endphp 
 
-<a href="character/{{ $current_character_id }}">{{ $current_character_name }}</a>
-
+<a href="character/{{ $current_character_id }}">{{ $current_character_name }}</a></p>
+	
+	
+	
 @endif
-		
-
-
-
-						
-	<li>
+	<li class="card">
 <a class="discussion_list" href="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.discussion') }}/{{ $discussion->category->slug }}/{{ $discussion->slug }}">
-<div class="chatter_avatar">
-@if(Config::get('chatter.user.avatar_image_database_field'))
 
-<?php $db_field = Config::get('chatter.user.avatar_image_database_field'); ?>
 
-<!-- If the user db field contains http:// or https:// we don't need to use the relative path to the image assets -->
-@if( (substr($discussion->user->{$db_field}, 0, 7) == 'http://') || (substr($discussion->user->{$db_field}, 0, 8) == 'https://') )
-<img src="{{ $discussion->user->{$db_field}  }}">
-@else
-<img src="{{ Config::get('chatter.user.relative_url_to_image_assets') . $discussion->user->{$db_field}  }}">
-@endif
-
-@else
-
-<span class="chatter_avatar_circle" style="background-color:#<?= \Webdevmatics\Chatter\Helpers\ChatterHelper::stringToColorCode($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) ?>">
-{{ strtoupper(substr($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}, 0, 1)) }}
-											
-	</span>
-@endif
-</div>
-
-<div class="chatter_middle">
-									
-										
-<h3 class="chatter_middle_title"> 
-title:{{ $discussion->title }} <div class="chatter_cat" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</div></h3>
-					
+<div class="chatter_middle card-body">
+	
+<h6>{{ $discussion->title }} <span class="badge" style="background-color:{{ $discussion->category->color }};">{{ $discussion->category->name }}</span></h6>
+	
 				
-<span class="chatter_middle_details">@lang('chatter::messages.discussion.posted_by') 
-			
-			
-<span data-href="character/{{ $discussion->character_id }}">profile</span>
 
-			
-<span data-href="/user">{{ ucfirst($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</span> {{ \Carbon\Carbon::createFromTimeStamp(strtotime($discussion->created_at))->diffForHumans() }}</span>
-@if($discussion->post[0]->markdown)
-<?php $discussion_body = GrahamCampbell\Markdown\Facades\Markdown::convertToHtml( $discussion->post[0]->body ); ?>
-@else
-<?php $discussion_body = $discussion->post[0]->body; ?>
-@endif
-<p>{{ substr(strip_tags($discussion_body), 0, 200) }}@if(strlen(strip_tags($discussion_body)) > 200){{ '...' }}@endif</p>
+<div class="text-muted" style="font-family:PT Sans;">Author: <span data-href="/user">{{ ucfirst($discussion->user->{Config::get('chatter.user.database_field_with_user_name')}) }}</span><div class="text-muted" style="line-height:1.4em;font-size:0.7em;font-family:PT Sans;">
+	{{ \Carbon\Carbon::createFromTimeStamp(strtotime($discussion->created_at))->diffForHumans() }}</span><br>
+	@if($discussion->post[0]->markdown)
+	<?php $discussion_body = GrahamCampbell\Markdown\Facades\Markdown::convertToHtml( $discussion->post[0]->body ); ?>
+	@else
+	<?php $discussion_body = $discussion->post[0]->body; ?>
+	@endif
+	{{ substr(strip_tags($discussion_body), 0, 200) }}@if(strlen(strip_tags($discussion_body)) > 200){{ '...' }}@endif
+	</div></div>
 </div>
 
 <div class="chatter_right">

@@ -25,14 +25,17 @@
     <div id="app">
         
         <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top scrolling-navbar ">
+<nav class="navbar navbar-expand-lg navbar-light scrolling-navbar ">
     <div class="container-fluid">
       
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
         aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a href="/"><img class="logo" src="images/rpgLabLogo.svg"></a>
+      <a href="/">
+        
+
+<img class="logo" src="{{URL::asset('/images/rpgLabLogo.svg')}}"></a>
       
       <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
         <ul class="navbar-nav ml-auto">

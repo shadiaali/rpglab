@@ -103,10 +103,10 @@ class ChatterHelper
      */
     public static function categoriesMenu($categories)
     {
-        $menu = '<ul class="nav nav-pills nav-stacked" style="flex-direction: column;">';
+        $menu = '<ul class="list-group list-group-flush nav nav-pills" style="flex-direction: column;">';
 
         foreach ($categories as $category) {
-            $menu .= '<li class="p-2">';
+            $menu .= '<li class="list-group-item">';
             $menu .= '<a href="/'.config('chatter.routes.home').'/'.config('chatter.routes.category').'/'.$category['slug'].'">';
             $menu .= '<div class="chatter-box" style="background-color:'.$category['color'].'"></div>';
             $menu .= $category['name'].'</a>';

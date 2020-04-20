@@ -1,9 +1,15 @@
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    
-    @if(auth()->user()->id == $character->user_id)
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">Edit {{$character->character_name}}</div>
+
+                <div class="card-body">
+                    @if(auth()->user()->id == $character->user_id)
     <form action="{{route('character.update')}}" method = "post">
         @csrf
         
@@ -21,11 +27,9 @@
     @else
     Why would you try to edit a character that doesn't belong to you?
     @endif
-    
-    
-    <div class="container justify-content-center text-center"><a onclick="goBack()" class="text-white btn spring-warmth-gradient btn-lg"> Go back</a><div>
-</div>
-
-
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

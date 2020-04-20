@@ -255,10 +255,10 @@ body {
   position: relative;
 }
 #chatter .left-column .nav-pills > li > a .chatter-box {
-  width: 10px;
+  width: 100% !important;
   height: 10px;
   border-radius: 2px;
-  float: left;
+  float: left !important;
   position: absolute;
   top: 50%;
   margin-top: -5px;
