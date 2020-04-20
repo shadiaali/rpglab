@@ -120,18 +120,18 @@
 
 	<div class="chatter_middle">
 		
-		posted by @php
+		@php
 		$current_character_id = $post->character_id;
 		@endphp 
 		
 		@if($current_character_id === null)
-		no character set 
+		
 		@else  
 		@php
 		$current_character_name = $post->character->character_name;
 		@endphp 
 		
-		<a href="character/{{ $current_character_id }}">{{ $current_character_name }}</a>
+		<h6><a href="character/{{ $current_character_id }}">{{ $current_character_name }}</a></h6>
 		@endif
 
 	

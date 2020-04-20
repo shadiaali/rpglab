@@ -1,9 +1,11 @@
 @extends('layouts.app')
 @section('title','Create Employee')
 @section('content')
-<div class="jumbotron card card-image mt-4 rare-wind-gradient wow fadeInRight">
-<div class="row mt-5">
-    <div class="wow fadeInRight col-sm-8 offset-sm-2 "><h1 class="display-4 fadeInRight text-white">Create New Rule</h1>
+<div class="card">
+
+    <div class="card-header"><h6>Create New Rule</h6></div>
+<div class="card-body">
+
     <form class="action="{{route('rules.store')}} method = "post">
         @csrf
         
@@ -19,14 +21,10 @@
         
         
         <button type = "submit" class = "btn btn-success">Submit</button>
-    </form><br><hr>
-    <div class="container justify-content-center text-center"><a onclick="goBack()" class="text-white btn spring-warmth-gradient btn-lg"> Go back</a><div>
+    </form>
+
 </div>
-<script>
-function goBack() {
-window.history.back();
-}
-</script>
-    </div>
-</div></div>
+</div>
+
+
 @endsection

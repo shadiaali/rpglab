@@ -243,10 +243,10 @@ a:hover {
             <a class="nav-link" href="rules">Rules</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="gameinfo">Game Info</a>
+            <a class="nav-link" href="#">Game Info</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="characterclasses">Character Classes</a>
+            <a class="nav-link" href="#">Character Classes</a>
           </li>
           @auth
           <li class="nav-item">

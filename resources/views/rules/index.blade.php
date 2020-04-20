@@ -3,8 +3,8 @@
 @section('content')
 
 
-<div class="jumbotron card card-image mt-4 rare-wind-gradient">
-<div class="text-white text-center py-5 px-4">
+<div class="jumbotron card card-image cloudy-knoxville-gradient">
+<div class="text-center">
 
     <h1 class="display-4 font-bold">Rules</h1>
 
