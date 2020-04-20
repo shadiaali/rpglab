@@ -7,12 +7,14 @@
 
 ## Instructions 
 1. Create a new database called ```rpglab```
-2. Install composer: ```composer install```
-3. Install the node modules: ```npm install```
-4. Migrate the database: ```php artisan migrate```
-5. Seed the database: ```php artisan db:seed```
-6. Run the server: ```php artisan serve```
-7. You can log in with the following:
+2. Remove the ```.example``` from the ``.env``` file
+3. Install composer: ```composer install```
+4. Install the node modules: ```npm install```
+5. Migrate the database: ```php artisan migrate```
+6. Seed the database: ```php artisan db:seed```
+7. Link the file storage: ```php artisan storage:link```
+8. Run the server: ```php artisan serve```
+9. You can log in with the following:
 **Admin Account**
 Username: Admin@admin.com
 Password: password
