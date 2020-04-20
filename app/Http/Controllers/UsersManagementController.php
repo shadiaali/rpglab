@@ -319,7 +319,7 @@ class UsersManagementController extends Controller
             $user->character_id = $request->input('character_id');
             
             $user->save();
-            return redirect()->route('users')->with('message','User profile successfully updated');
+            return redirect()->route('users')->with('message','Character successfully updated');
         }
 
 }

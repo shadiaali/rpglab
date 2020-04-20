@@ -55,7 +55,7 @@ class CharacterController extends Controller
 
         $character->save();
 
-        return 'Success';
+        return redirect('character')->with('success', trans('laravelusers::laravelusers.messages.update-success'));
     }
 
     //character details/profile
