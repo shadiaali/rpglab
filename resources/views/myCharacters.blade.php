@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
 
+    <a href="characters">Character Listing</a> 
 
 <a href="addcharacter">Add A Character</a> 
 

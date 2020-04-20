@@ -36,32 +36,37 @@
       
       <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
         <ul class="navbar-nav ml-auto">
-            @if (Route::has('login'))
+            
           <li class="nav-item">
-            <a class="nav-link" href="rules">Rules</a>
+            <a class="nav-link" href="/home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="gameinfo">Game Info</a>
+            <a class="nav-link" href="/character">Character Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="characterclasses">Character Classes</a>
+            <a class="nav-link" href="/awards">Awards</a>
           </li>
-          @auth
+          
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/home') }}">Home</a>
+            <a class="nav-link" href="/forums">World</a>
           </li>
-          @else
+          
 
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">Login</a>
+            <a class="nav-link" href="/users">Authors</a>
           </li>
-          @if (Route::has('register'))
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}">Register</a>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown link
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
           </li>
-          @endif
-            @endauth
-    @endif
+         
         </ul>
         
       </div>
