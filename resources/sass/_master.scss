@@ -3,11 +3,41 @@ body{
 }
 
 a {
-    color:#5E6774 !important;
+    color: $blue !important;
     font-weight: 100;
+    padding:5px !important;
+    border-bottom: 2px solid transparent !important;
+    font-family: PT Sans !important;
     }
     
     a:hover {
-    background-color: #FCF797;
-    border-radius:10px;
+    border-bottom: 4px solid #FCF797 !important;
+    background-color: #FCFCC8 !important;
+    padding:5px !important;
+    font-family: PT Sans !important;
+    color: $blue !important;
+    }
+
+    .card {
+    
+        border: 0;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    .card-header {
+        margin-bottom: 0px;
+        background-color: #F6F8F9 !important;
+        padding: 0.75rem 1.25rem;
+        border-bottom: 1px solid #EDF5FD !important;
+        font-family: PT Sans !important;
+        color: $blue !important;
+        font-size: 1.7em !important;
+        font-weight: bolder !important;
+    }
+
+    .card-body {
+        font-family: GFS Didot !important;
+        color: $grey !important;
+        font-size: 1.2em !important;
     }

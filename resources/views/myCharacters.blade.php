@@ -1,26 +1,48 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-11">
+            <div class="card">
+                <div class="card-header">Character Dashboard</div>
 
-    <a href="characters">Character Listing</a> 
+                <div class="card-body">
+                    
+                    
+                    
+            
+            <section class="p-md-3 mx-md-5 text-center">
+                    
+                    <div class="row">
 
-<a href="addcharacter">Add A Character</a> 
+                        @foreach(Auth::user()->characters as $character)
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+<div class="p-4">
+<div class="avatar w-100 white d-flex justify-content-center align-items-center">
+    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="img-fluid rounded-circle z-depth-1"/>
+        </div>
+    <div class="text-center mt-3">
+    <h6 class="font-weight-bold pt-2"><a href="character/{{ $character->id }}">{{ $character->character_name }}</a></h6><span><a class="text-white btn btn-block btn-primary" href="character/{{ $character->id }}/edit" role="button">Link</a></span>
+    </div>
+    </div>
+    </div>
+    @endforeach
+            
+
+
+                        </div>
+                        </section>
+                    
 
 
 
 
-    <br />
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-<br>
-@foreach(Auth::user()->characters as $character)
-<tr class="text-center">
-    <td>id: {{ $character->id }} | </td>
-    <td>{{ $character->character_name }} | </td>
-    <td><a href="character/{{ $character->id }}/edit">Edit</a> 
 
-</tr>
-@endforeach
-        </div></div></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
