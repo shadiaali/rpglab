@@ -4,6 +4,24 @@
 
 <p align="center"><img src="https://media.giphy.com/media/Fv8uxK7iNIEhi/source.gif" width="400"></p>
 
+
+## Instructions 
+1. Create a new database called ```rpglab```
+2. Install composer: ```composer install```
+3. Install the node modules: ```npm install```
+4. Migrate the database: ```php artisan migrate```
+5. Seed the database: ```php artisan db:seed```
+6. Run the server: ```php artisan serve```
+7. You can log in with the following:
+**Admin Account**
+Username: Admin@admin.com
+Password: password
+
+**User Account**
+Username: User@user.com
+Password: password 
+
+
 # Current Features
 
 -   [x] **Author Account**
