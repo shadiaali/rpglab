@@ -8,20 +8,20 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'showing-all-users'     => 'Showing All Users',
+    'showing-all-users'     => 'Authors List',
     'users-menu-alt'        => 'Show Users Management Menu',
-    'create-new-user'       => 'Create New User',
+    'create-new-user'       => 'Create New Author',
     'show-deleted-users'    => 'Show Deleted User',
     'editing-user'          => 'Editing User :name',
     'showing-user'          => 'Showing User :name',
     'showing-user-title'    => ':name\'s Information',
 
     'users-table' => [
-        'caption'   => '{1} :userscount user total|[2,*] :userscount total users',
+        'caption'   => '{1} Total Author Accounts: :userscount |[2,*] :userscount total users',
         'id'        => 'ID',
         'name'      => 'Name',
         'email'     => 'Email',
-        'role'      => 'Role',
+        'role'      => 'Level',
         'created'   => 'Created',
         'updated'   => 'Updated',
         'actions'   => 'Actions',
@@ -29,9 +29,9 @@ return [
     ],
 
     'buttons' => [
-        'create-new'    => '<span class="hidden-xs hidden-sm">New User</span>',
-        'delete'        => '<i class="far fa-trash-alt fa-fw" aria-hidden="true"></i>  <span class="hidden-xs hidden-sm">Delete</span><span class="hidden-xs hidden-sm hidden-md"> User</span>',
-        'show'          => '<i class="fas fa-eye fa-fw" aria-hidden="true"></i> <span class="hidden-xs hidden-sm">Show</span><span class="hidden-xs hidden-sm hidden-md"> User</span>',
+        'create-new'    => 'New Author Account',
+        'delete'        => '<i class="far fa-trash-alt fa-fw" aria-hidden="true"></i>  Delete',
+        'show'          => '<i class="fas fa-eye fa-fw" aria-hidden="true"></i> View Profile',
         'edit'          => '<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i> <span class="hidden-xs hidden-sm">Edit</span><span class="hidden-xs hidden-sm hidden-md"> User</span>',
         'back-to-users' => '<span class="hidden-sm hidden-xs">Back to </span><span class="hidden-xs">Users</span>',
         'back-to-user'  => 'Back  <span class="hidden-xs">to User</span>',

@@ -62,9 +62,7 @@
         <li class="nav-item">
             <a class="nav-link" href="/awards">Awards</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/users">Users</a>
-        </li>
+    
         <li class="nav-item">
             <a class="nav-link" href="/forums">World</a>
         </li>
@@ -79,7 +77,8 @@
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
 
-                <a class="dropdown-item" href="/user/{{ Auth::user()->id }}/edit">Edit User</a>
+                <a class="dropdown-item" href="/user/{{ Auth::user()->id }}/edit">Edit Author</a>
+                <a class="dropdown-item" href="/users">View Authors Listing</a>
 
                 @role('admin')
 
