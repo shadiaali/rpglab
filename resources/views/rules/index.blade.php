@@ -17,18 +17,20 @@
 </div>
 
 
-<div class="jumbotron jumbotron-fluid">
 
-
+<div class="container">
             @foreach($rules as $rule)
     
 
-<h2>Rule</h2>
-<h3>{{ $rule->rule }}</h3>
 
+<div class="card">
+    <div class="card-header">
+        {{ $rule->rule }}</div>
+        <div class="card-body">
+            {{ $rule->more_info }}
+        </div>
+</div>
                     
-<h2>More Info</h2>
-<h3>{{ $rule->more_info }}</h3>
     
                             
 @role('admin')
@@ -39,6 +41,5 @@
                 @endforeach
             
 </div>
-
 
 @endsection
