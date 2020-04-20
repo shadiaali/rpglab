@@ -15,8 +15,11 @@ class CreateAwardsTable extends Migration
     {
         Schema::create('awards', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('filename');
+            
             $table->bigInteger('character_id')->unsigned();
+            $table->string('filename')->nullable();
+        $table->string('mime')->nullable();
+        $table->string('original_filename')->nullable();
             $table->timestamps();
         });
     }

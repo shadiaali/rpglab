@@ -48,6 +48,7 @@ Route::get('character/{id}','CharacterController@details')->name('character.deta
 //user can edit owned character 
 Route::get('character/{id}/edit', 'CharacterController@editCharacter')->middleware(['auth']);
 
+
 //user edit owned character update route
 Route::post('character/update','CharacterController@updateCharacter')->name('character.update');
 

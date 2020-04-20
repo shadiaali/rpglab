@@ -9,15 +9,12 @@
 
                 <div class="card-body">
                     
-                    <form method="post" action="{{ route('award.store') }}">
+                    <form method="post" enctype="multipart/form-data" action="{{ route('award.store') }}">
                         {{csrf_field()}}
                 
                         <div class="form-group">
                 
-                <div class="form-group">
-                <label class="col-md-4">file</label>
-                <input type="text" class="form-control" name="filename" />
-                </div>
+               
 
 
 
@@ -32,7 +29,11 @@
                     </select>
 
 </div>
-                        
+<div class="form-group">
+    <input type="file" class="form-control" name="filename"/>
+
+    </div>
+    
                         <button type = "submit" class = "btn btn-success">Submit</button>
                     </form>
                     

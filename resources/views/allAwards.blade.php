@@ -23,11 +23,10 @@
                             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
 <div class="p-4">
 <div class="avatar w-100 white d-flex justify-content-center align-items-center">
-    <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" class="img-fluid rounded-circle z-depth-1"/>
+    <img src="{{URL::asset('/storage')}}/{{$award->filename}}" class="img-fluid rounded-circle"/>
         </div>
     <div class="text-center mt-3">
-    <h6 class="font-weight-bold pt-2">{{ $award->filename }}</h6>
-    </div>
+        <h6>Sent to {{$award->character->character_name}}</h6>
     </div>
     </div>
     @endforeach
