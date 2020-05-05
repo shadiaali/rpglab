@@ -7,7 +7,7 @@
 
 ## Instructions 
 1. Create a new database called ```rpglab```
-2. Remove the ```.example``` from the ``.env``` file
+2. Remove the ```.example``` from the ```.env``` file
 3. Install composer: ```composer install```
 4. Install the node modules: ```npm install```
 5. Migrate the database: ```php artisan migrate```
