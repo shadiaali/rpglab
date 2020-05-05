@@ -15,6 +15,12 @@
                     @endif
 
                     You are logged in!
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/messages">Messages @include('messenger.unread-count')</a></li>
+                        <li><a href="/messages/create">Create New Message</a></li>
+                    </ul>
+
                 </div>
             </div>
         </div>
