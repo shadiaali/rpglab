@@ -49661,8 +49661,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/shadia/Desktop/rpglab/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/shadia/Desktop/rpglab/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/shadia/Desktop/Ali_S_Thesis/App/rpglab/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/shadia/Desktop/Ali_S_Thesis/App/rpglab/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

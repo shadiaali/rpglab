@@ -140,7 +140,7 @@ $current_character_name = $discussion->character->character_name;
 <input type="text" class="form-control" id="title" name="title" placeholder="@lang('chatter::messages.editor.title')" value="{{ old('title') }}" > 
 
 @php
-$isCharacterIdEmpty = $discussion->user->character_id;
+$isCharacterIdEmpty = $discussion ?? ''->user ?? ''->character_id ??'';
 @endphp 
 
 @if($isCharacterIdEmpty === null)
@@ -148,7 +148,7 @@ $isCharacterIdEmpty = $discussion->user->character_id;
 <input type="hidden" class="form-control" id="character_id" name="character_id" value="">
 
 @else  
-<input type="hidden" class="form-control" id="character_id" name="character_id" value="{{ $discussion->user->character_id}}">
+<input type="hidden" class="form-control" id="character_id" name="character_id" value="{{ $discussion ?? ''->user ?? ''->character_id ??'' }}">
 @endif
 
 
