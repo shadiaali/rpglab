@@ -1,6 +1,6 @@
 <p align="center"><img src="https://github.com/shadiaali/rpglab/blob/master/public/images/rpglab_logo_png.png?raw=true" width="400"></p>
 
-## This is my working repo for my thesis project.
+## This is my working repo for my thesis project. This project is currently in development.
 
 <p align="center"><img src="https://media.giphy.com/media/Fv8uxK7iNIEhi/source.gif" width="400"></p>
 
